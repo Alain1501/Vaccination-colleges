@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Vaccination collège – Île-de-France</title>
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --border:#e5e7eb;
+      --primary:#2f5bff;
+      --primary-soft:#e9efff;
+      --accent:#ff8a00;
+      --accent-soft:#fff2e3;
+      --shadow: 0 14px 40px rgba(17,24,39,.08);
+      --radius:18px;
+      --radius-sm:14px;
+      --max: 1200px;
+      --sidebar: 280px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: var(--font);
+      color:var(--text);
+      background:var(--bg);
+    }
+    a{color:inherit}
+    .layout{display:flex; min-height:100vh;}
+    /* Sidebar */
+    .sidebar{
+      width: var(--sidebar);
+      padding: 18px 14px;
+      position: sticky;
+      top:0;
+      height:100vh;
+      overflow:auto;
+      border-right:1px solid var(--border);
+      background:linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      padding:10px 10px 14px 10px;
+    }
+    .brandMark{
+      width:36px;height:36px;border-radius:12px;
+      background: var(--primary-soft);
+      display:grid;place-items:center;
+      color:var(--primary); font-weight:800;
+      border:1px solid rgba(47,91,255,.18);
+    }
+    .brandName{font-weight:800; letter-spacing:.2px}
+    .navTitle{
+      margin: 8px 10px 8px;
+      font-size: 12px;
+      letter-spacing:.08em;
+      text-transform: uppercase;
+      color:var(--muted);
+    }
+    .navList{display:flex; flex-direction:column; gap:6px; padding:0 6px 16px}
+    .navItem{
+      border:1px solid transparent;
+      padding:10px 10px;
+      border-radius: 12px;
+      cursor:pointer;
+      color: #1f2937;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .navItem:hover{background:#f4f7ff; border-color: rgba(47,91,255,.14);}
+    .navItem.active{background:var(--primary-soft); border-color: rgba(47,91,255,.22);}
+    .chip{
+      font-size:12px; padding:2px 8px; border-radius:999px;
+      background:#f3f4f6; color:#374151;
+      border:1px solid var(--border);
+      white-space:nowrap;
+    }
+    .footNote{
+      padding: 12px 10px;
+      color:var(--muted);
+      font-size:12px;
+      border-top:1px solid var(--border);
+      margin-top:10px;
+    }
+    /* Main */
+    .main{flex:1; padding:18px;}
+    .topbar{
+      max-width: var(--max);
+      margin: 0 auto 14px;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px;
+    }
+    .rightBar{display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end;}
+    .select{
+      padding:10px 12px;
+      border:1px solid var(--border);
+      border-radius: 12px;
+      background:#fff;
+      font-weight:600;
+    }
+    .search{
+      display:flex; align-items:center; gap:10px;
+      padding:10px 12px;
+      border:1px solid var(--border);
+      border-radius: 12px;
+      background:#fff;
+      min-width: 260px;
+    }
+    .search input{
+      border:none; outline:none; width:100%;
+      font-size:14px;
+    }
+    .container{max-width: var(--max); margin:0 auto;}
+    .hero{
+      display:grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap:16px;
+      align-items:stretch;
+      margin-bottom: 16px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .heroText{padding:22px;}
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-weight:800;
+      border:1px solid rgba(47,91,255,.18);
+      font-size:12px;
+      letter-spacing:.02em;
+    }
+    h1{
+      margin:12px 0 10px;
+      font-size:46px;
+      line-height:1.08;
+      letter-spacing:-.02em;
+    }
+    h1 .accent{color: var(--accent)}
+    .subtitle{
+      margin:0;
+      color: var(--muted);
+      font-size:16px;
+      line-height:1.55;
+      max-width: 62ch;
+    }
+    .btnRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius: 999px;
+      border:1px solid var(--border);
+      background:#fff;
+      text-decoration:none;
+      font-weight:800;
+      font-size:13px;
+      cursor:pointer;
+      transition: transform .05s ease;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .btn.primary{
+      background: var(--primary);
+      border-color: rgba(47,91,255,.45);
+      color:#fff;
+    }
+    .btn.soft{
+      background: var(--accent-soft);
+      border-color: rgba(255,138,0,.22);
+      color:#7a3a00;
+    }
+    .heroArt{
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .artBox{
+      height: 100%;
+      border-radius: 16px;
+      background: radial-gradient(circle at 20% 20%, rgba(47,91,255,.15), transparent 45%),
+                  radial-gradient(circle at 70% 30%, rgba(255,138,0,.18), transparent 55%),
+                  linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
+      border:1px solid rgba(17,24,39,.06);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      min-height: 240px;
+    }
+    .artLabel{
+      position:absolute;
+      bottom:14px;
+      left:14px;
+      right:14px;
+      padding:10px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.85);
+      border:1px solid rgba(17,24,39,.08);
+      color:var(--muted);
+      font-size:12px;
+    }
+    .logoImg{
+      height:38px; max-width: 220px; object-fit:contain;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,.12));
+      margin-bottom: 10px;
+    }
+    /* Sections */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:16px;
+    }
+    .sectionHead{
+      padding:18px 20px 0;
+    }
+    .sectionTitle{
+      margin:0;
+      font-size:16px;
+      font-weight:900;
+      letter-spacing:.2px;
+    }
+    .sectionDesc{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.5;
+    }
+    .sectionBody{padding:14px 20px 20px;}
+    .resourceGroup{display:flex; flex-wrap:wrap; gap:10px}
+    .note{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.55;
+      white-space:pre-wrap;
+    }
+    /* FAQ */
+    .faqMeta{display:flex; align-items:flex-start; justify-content:space-between; gap:10px; flex-wrap:wrap}
+    .faqTitle{
+      margin:0;
+      font-size:18px;
+      font-weight:900;
+    }
+    .faqCount{color:var(--muted); font-size:12px; margin-top:6px}
+    .accordion{display:flex; flex-direction:column; gap:10px; margin-top:12px}
+    details{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+    }
+    summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight:850;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    summary::-webkit-details-marker{display:none}
+    .ans{color:#374151; font-size:14px; line-height:1.6; margin-top:10px; white-space:pre-wrap;}
+    .tagRow{display:flex; gap:8px; flex-wrap:wrap; margin-top:8px}
+    .tag{font-size:12px; padding:2px 8px; border-radius:999px; background:#f3f4f6; border:1px solid var(--border); color:#374151}
+    /* Mobile */
+    .burger{
+      display:none;
+      padding:10px 12px;
+      border:1px solid var(--border);
+      border-radius: 12px;
+      background:#fff;
+      font-weight:800;
+      cursor:pointer;
+    }
+    @media (max-width: 980px){
+      .hero{grid-template-columns: 1fr;}
+      h1{font-size:38px}
+      .sidebar{position:fixed; left:-320px; top:0; bottom:0; z-index:50; transition:left .2s ease;}
+      .sidebar.open{left:0}
+      .burger{display:inline-flex}
+      .search{min-width: 200px}
+    }
+  
+    /* ===== UI adjustments (no sidebar, no search) ===== */
+    .sidebar{display:none !important;}
+    .burger{display:none !important;}
+    .search{display:none !important;}
+    .layout{grid-template-columns: 1fr !important;}
+    .main{padding-left: 0 !important;}
+    .select{padding:12px 16px !important; border-radius:14px !important; font-size:15px !important; min-width:180px;}
+    /* ===== RTL languages support (Arabic, Pashto, Kurdish) ===== */
+    .rtl { direction: rtl; text-align: right; }
+    .rtl .hero, .rtl .card, .rtl .sectionBody, .rtl .sectionTitle, .rtl .sectionDesc,
+    .rtl p, .rtl li, .rtl .faqQ, .rtl .faqA { text-align: right; }
+
+</style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brandMark">V</div>
+        <div>
+          <div class="brandName">Vaccination Collège</div>
+          <div style="color:var(--muted);font-size:12px;margin-top:2px">HPV • Méningite ACWY • Rappels</div>
+        </div>
+      </div>
+
+      <div class="navTitle">Sections</div>
+      <div class="navList" id="navList"></div>
+
+      <div class="footNote" id="sideFooter">
+        Astuce : utilisez la recherche pour trouver rapidement une réponse.
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar container">
+        <button class="burger" id="burgerBtn">☰ Menu</button>
+
+        <div style="flex:1"></div>
+
+        <div class="rightBar">
+          <div class="search" title="Rechercher dans la FAQ">
+            🔎 <input id="searchInput" type="search" placeholder="Rechercher…"/>
+          </div>
+          <select id="langSelect" class="select" aria-label="Langue"></select>
+        </div>
+      </div>
+
+      <div class="container">
+        <section class="hero">
+          <div class="card heroText">
+            <div class="kicker">Informations & inscription</div>
+            <h1>Vaccination <span class="accent">collège</span><br/>Île-de-France</h1>
+            <p class="subtitle" id="heroSubtitle">
+              Accédez aux informations essentielles, aux documents et à la FAQ. L’inscription se fait en quelques clics.
+            </p>
+            <div class="btnRow" id="heroBtns"></div>
+          </div>
+
+          <div class="card heroArt">
+            <div class="artBox">
+              <div style="height:100%;display:flex;align-items:center;justify-content:center;padding:18px;">
+                <img src="img/logo_service.png" alt="Logo du service" style="max-width:320px;max-height:180px;width:auto;height:auto;object-fit:contain;filter: drop-shadow(0 6px 18px rgba(17,24,39,.18));"/>
+              </div>
+            </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="grid">
+          <section class="card" id="introCard">
+            <div class="sectionHead">
+              <div class="sectionTitle" id="introTitle">Message & ressources</div>
+              <div class="sectionDesc" id="introDesc">Documents officiels, formulaires et vidéos.</div>
+            </div>
+            <div class="sectionBody" id="introBody"></div>
+          </section>
+
+          <section class="card" id="faqCard">
+            <div class="sectionHead">
+              <div class="faqMeta">
+                <div>
+                  <div class="faqTitle" id="faqTitle">FAQ</div>
+                  <div class="faqCount" id="faqCount"></div>
+                </div>
+                <div class="tagRow" id="activeFilters"></div>
+              </div>
+            </div>
+            <div class="sectionBody">
+              <div class="accordion" id="faqList"></div>
+            </div>
+          </section>
+
+        <section class="card" id="contactCard" style="margin-top:16px;">
+          <div class="sectionHead">
+            <div class="sectionTitle">Nous contacter</div>
+            <div class="sectionDesc">Adresse, téléphone et email.</div>
+          </div>
+          <div class="sectionBody">
+            <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+              <span class="chip">📍 8 Rue de Vaux, 77000 Melun</span>
+              <span class="chip">☎️ 01 81 74 28 50</span>
+              <a class="btn soft" href="mailto:vaccin-hpv@ghsif.fr">vaccin-hpv@ghsif.fr</a>
+            </div>
+          </div>
+        </section>
+
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+<script>
+  const FAQ_URL = './faq.json';
+  const INTRO_URL = './intro_resources.json';
+
+  const els = {
+    sidebar: document.getElementById('sidebar'),
+    burgerBtn: document.getElementById('burgerBtn'),
+    navList: document.getElementById('navList'),
+    langSelect: document.getElementById('langSelect'),
+    searchInput: document.getElementById('searchInput'),
+    heroBtns: document.getElementById('heroBtns'),
+    introBody: document.getElementById('introBody'),
+    faqTitle: document.getElementById('faqTitle'),
+    faqCount: document.getElementById('faqCount'),
+    faqList: document.getElementById('faqList'),
+    activeFilters: document.getElementById('activeFilters'),
+  };
+
+  let faqData = null;
+  let introData = null;
+  let lang = 'fr';
+  let activeSection = 'all';
+
+  const safeText = (v) => (v ?? '').toString();
+
+  const normPath = (p) => {
+    if(!p) return p;
+    // On GitHub Pages (project pages), absolute paths like /img/... break.
+    // So we normalize to relative paths.
+    return (typeof p === 'string' && p.startsWith('/')) ? p.slice(1) : p;
+  };
+
+  const t = (obj, fallback='') => {
+    if(!obj) return fallback;
+    return obj[lang] || obj.fr || obj.en || Object.values(obj)[0] || fallback;
+  };
+
+  const makeBtn = (label, href, cls='btn') => {
+    const a = document.createElement('a');
+    a.className = cls;
+    a.href = href;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.textContent = label;
+    return a;
+  };
+
+  function buildLangSelect(){
+    els.langSelect.innerHTML = '';
+    const langs = (faqData?.meta?.languages) || ['fr'];
+    const labels = faqData?.meta?.lang_labels || {};
+    langs.forEach(l => {
+      const opt = document.createElement('option');
+      opt.value = l;
+      opt.textContent = labels[l] || l;
+      if(l === lang) opt.selected = true;
+      els.langSelect.appendChild(opt);
+    });
+  }
+
+  function buildSidebar(){
+    const sections = faqData?.sections || [];
+    const items = faqData?.items || [];
+    const counts = {};
+    items.forEach(it => { counts[it.section] = (counts[it.section]||0)+1; });
+
+    const allLabel = (lang === 'fr') ? 'Tout' :
+                     (lang === 'en') ? 'All' :
+                     (lang === 'ar') ? 'الكل' :
+                     (lang === 'tr') ? 'Tümü' :
+                     (lang === 'ps') ? 'ټول' : 'Hemû';
+
+    els.navList.innerHTML = '';
+    const all = document.createElement('div');
+    all.className = 'navItem' + (activeSection==='all'?' active':'');
+    all.onclick = () => { activeSection='all'; renderFAQ(); buildSidebar(); };
+    all.innerHTML = `<span>${allLabel}</span><span class="chip">${items.length}</span>`;
+    els.navList.appendChild(all);
+
+    sections.forEach(sec => {
+      const id = sec.id;
+      const label = t(sec.title, id);
+      const row = document.createElement('div');
+      row.className = 'navItem' + (activeSection===id?' active':'');
+      row.onclick = () => { activeSection=id; renderFAQ(); buildSidebar(); };
+      row.innerHTML = `<span>${label}</span><span class="chip">${counts[id]||0}</span>`;
+      els.navList.appendChild(row);
+    });
+  }
+
+  function renderHero(){
+    els.heroBtns.innerHTML = '';
+
+    // Keep: official IDF website
+    const idfUrl = introData?.official_idf?.site?.url;
+    const idfLabel = t(introData?.official_idf?.site?.label, 'Site officiel – Vaccination Collège Île-de-France');
+    if(idfUrl){
+      els.heroBtns.appendChild(makeBtn(idfLabel, idfUrl, 'btn'));
+    }
+
+    // Add: 3 key videos next to the official site
+    const vids = (introData?.resources?.videos || []).slice(0,3);
+    vids.forEach(v => {
+      const label = t(v.label, 'Vidéo') || t(v.title, 'Vidéo');
+      if(v?.url) els.heroBtns.appendChild(makeBtn(label, v.url, 'btn'));
+    });
+  }
+
+
+
+  function renderIntro(){
+    const root = els.introBody;
+    root.innerHTML = '';
+
+    // Logo if available
+    const logoFile = normPath(introData?.branding?.service_logo?.file || introData?.branding?.logo?.file);
+    const logoAlt = t(introData?.branding?.service_logo?.alt || introData?.branding?.logo?.alt, 'Logo');
+    if(logoFile){
+      const img = document.createElement('img');
+      img.src = logoFile;
+      img.alt = logoAlt;
+      img.className = 'logoImg';
+      root.appendChild(img);
+    }
+
+    // Intro text
+    const introBlock = introData?.intro;
+    if(introBlock){
+      const title = document.createElement('div');
+      title.style.fontWeight = '900';
+      title.style.fontSize = '16px';
+      title.textContent = t(introBlock.title, 'Introduction');
+      root.appendChild(title);
+
+      const body = document.createElement('div');
+      body.className = 'note';
+      body.style.fontSize = '13px';
+      body.style.color = '#374151';
+      body.textContent = t(introBlock.body, '') || t(introBlock.text, '');
+      root.appendChild(body);
+
+      const sig = (typeof introBlock.signature === 'string') ? introBlock.signature : t(introBlock.signature, '');
+      if(sig){
+        const s = document.createElement('div');
+        s.className = 'note';
+        s.textContent = sig;
+        root.appendChild(s);
+      }
+    }
+
+    const group = document.createElement('div');
+    group.className = 'resourceGroup';
+    root.appendChild(group);
+
+    const addBtn = (label, href) => group.appendChild(makeBtn(label, href, 'btn'));
+
+    // Registration button (HPV + Méningite ACWY uniquement)
+    const regUrl = introData?.registration?.url || introData?.registration?.online?.url;
+    const regLabel = t(introData?.registration?.label || introData?.registration?.online?.label, 'Inscription en ligne (HPV + Méningite ACWY uniquement)');
+    if(regUrl) addBtn(regLabel, regUrl);
+
+    // Forms
+    (introData?.resources?.forms || []).forEach(f => addBtn(t(f.label, 'Formulaire') || t(f.title, 'Formulaire'), f.url));
+    // Existing videos
+    (introData?.resources?.videos || []).forEach(v => addBtn(t(v.label, 'Vidéo') || t(v.title, 'Vidéo'), v.url));
+    // Existing email
+    if(introData?.contact?.email) addBtn(introData.contact.email, `mailto:${introData.contact.email}`);
+
+    // Additions (chef) — optional
+    if(introData?.official_idf?.flyer_pdf?.file){
+      addBtn(t(introData.official_idf.flyer_pdf.label, 'Flyer officiel (PDF)'), normPath(introData.official_idf.flyer_pdf.file));
+    }
+    if(introData?.hpv_flyer_multilang?.url){
+      addBtn(t(introData.hpv_flyer_multilang.label, 'Ressources HPV'), introData.hpv_flyer_multilang.url);
+    }
+
+    // Meningite documents
+    if(introData?.meningite_documents){
+      const mt = document.createElement('div');
+      mt.style.marginTop = '14px';
+      mt.style.fontWeight = '900';
+      mt.textContent = t(introData.meningite_documents.label, 'Méningite – documents');
+      root.appendChild(mt);
+
+      const mgroup = document.createElement('div');
+      mgroup.className = 'resourceGroup';
+      mgroup.style.marginTop = '10px';
+      root.appendChild(mgroup);
+
+      (introData.meningite_documents.items || []).forEach(it => {
+        const a = makeBtn(t(it.label, 'Document'), normPath(it.file), 'btn');
+        mgroup.appendChild(a);
+      });
+
+      const note = t(introData.meningite_documents.note, '');
+      if(note){
+        const n = document.createElement('div');
+        n.className = 'note';
+        n.textContent = note;
+        root.appendChild(n);
+      }
+    }
+  }
+
+  function renderFAQ(){
+    const q = (els.searchInput.value || '').trim().toLowerCase();
+    const items = (faqData?.items || []).filter(it => {
+      if(activeSection !== 'all' && it.section !== activeSection) return false;
+      const question = safeText(t(it.q));
+      const answer = safeText(t(it.a));
+      const hay = (question + ' ' + answer).toLowerCase();
+      if(!q) return true;
+      return hay.includes(q);
+    });
+
+    els.faqTitle.textContent = t(faqData?.meta?.title, 'FAQ');
+    const total = (faqData?.items || []).filter(it => activeSection==='all' ? true : it.section===activeSection).length;
+    els.faqCount.textContent = `${items.length} / ${total}`;
+
+    els.faqList.innerHTML = '';
+    items.forEach(it => {
+      const d = document.createElement('details');
+      const s = document.createElement('summary');
+      s.textContent = t(it.q, 'Question');
+      const right = document.createElement('span');
+      right.className = 'chip';
+      const sec = (faqData?.sections || []).find(x => x.id === it.section);
+      right.textContent = sec ? t(sec.title, it.section) : it.section;
+      s.appendChild(right);
+
+      const a = document.createElement('div');
+      a.className = 'ans';
+      a.textContent = t(it.a, '');
+
+      d.appendChild(s);
+      d.appendChild(a);
+
+      els.faqList.appendChild(d);
+    });
+  }
+
+  function applyDirection() {
+    const rtlLangs = ['ar','ps','ku'];
+    if (rtlLangs.includes(lang)) {
+      document.body.classList.add('rtl');
+      document.documentElement.setAttribute('dir','rtl');
+    } else {
+      document.body.classList.remove('rtl');
+      document.documentElement.setAttribute('dir','ltr');
+    }
+  }
+
+  async function init(){
+    const [faqRes, introRes] = await Promise.all([
+      fetch(FAQ_URL, {cache:'no-store'}),
+      fetch(INTRO_URL, {cache:'no-store'})
+    ]);
+    faqData = await faqRes.json();
+    introData = await introRes.json();
+
+    // initial lang = first meta language if present
+    const langs = faqData?.meta?.languages || ['fr'];
+    lang = langs.includes('fr') ? 'fr' : langs[0];
+
+    buildLangSelect();
+    buildSidebar();
+    renderHero();
+    renderIntro();
+    renderFAQ();
+  }
+
+  // Events
+  els.burgerBtn.addEventListener('click', () => els.sidebar.classList.toggle('open'));
+  els.langSelect.addEventListener('change', (e) => {
+    lang = e.target.value;
+    applyDirection();
+    buildSidebar();
+    renderHero();
+    renderIntro();
+    renderFAQ();
+  });
+  els.searchInput.addEventListener('input', () => renderFAQ());
+  document.addEventListener('click', (e) => {
+    if(window.innerWidth <= 980){
+      const inside = els.sidebar.contains(e.target) || els.burgerBtn.contains(e.target);
+      if(!inside) els.sidebar.classList.remove('open');
+    }
+  });
+
+  init().catch(err => {
+    console.error(err);
+    alert("Erreur de chargement des fichiers JSON. Vérifiez que faq.json et intro_resources.json sont bien à la racine du site.");
+  });
+</script>
+</body>
+</html>

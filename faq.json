@@ -1,0 +1,633 @@
+{
+  "meta": {
+    "title": {
+      "fr": "FAQ – Vaccination au collège (HPV & Méningocoque)",
+      "ar": "الأسئلة الشائعة – التلقيح في الإعدادية (HPV والمكورات السحائية)",
+      "tr": "SSS – Okulda Aşılama (HPV ve Meningokok)",
+      "en": "FAQ – School Vaccination (HPV & Meningococcal)",
+      "ps": "پوښتنې او ځوابونه – په ښوونځي کې واکسین (HPV او مننژیت)",
+      "ku": "پرسیار و وەڵام – ڤاکسین لە قوتابخانە (HPV و مننژیت)",
+      "ro": "Întrebări frecvente – Vaccinare la colegiu (HPV și meningococ)",
+      "ka": "ხშირი კითხვები – ვაქცინაცია სკოლაში (HPV და მენინგოკოკი)"
+    },
+    "languages": [
+      "fr",
+      "ar",
+      "tr",
+      "en",
+      "ps",
+      "ku",
+      "ka",
+      "ro"
+    ],
+    "lang_labels": {
+      "fr": "Français",
+      "ar": "العربية",
+      "tr": "Türkçe",
+      "en": "English",
+      "ps": "پښتو",
+      "ku": "Kurdî (Soranî)",
+      "ka": "ქართული",
+      "ro": "Română"
+    }
+  },
+  "sections": [
+    {
+      "key": "general",
+      "title": {
+        "fr": "Généralités",
+        "ar": "معلومات عامة",
+        "tr": "Genel bilgiler",
+        "en": "General",
+        "ps": "عمومي معلومات",
+        "ku": "گشتی",
+        "ro": "Generalități",
+        "ka": "ზოგადი საკითხები"
+      }
+    },
+    {
+      "key": "hpv",
+      "title": {
+        "fr": "Vaccin HPV",
+        "ar": "لقاح HPV",
+        "tr": "HPV aşısı",
+        "en": "HPV vaccine",
+        "ps": "د HPV واکسین",
+        "ku": "ڤاکسینی HPV",
+        "ro": "Vaccin HPV",
+        "ka": "HPV ვაქცინა"
+      }
+    },
+    {
+      "key": "meningococcal",
+      "title": {
+        "fr": "Vaccin Méningocoque",
+        "ar": "لقاح المكورات السحائية",
+        "tr": "Meningokok aşısı",
+        "en": "Meningococcal vaccine",
+        "ps": "د مننژیت واکسین",
+        "ku": "ڤاکسینی مننژیت",
+        "ro": "Vaccin meningococic",
+        "ka": "მენინგოკოკის ვაქცინა"
+      }
+    },
+    {
+      "key": "safety",
+      "title": {
+        "fr": "Sécurité",
+        "ar": "السلامة",
+        "tr": "Güvenlik",
+        "en": "Safety",
+        "ps": "خوندیتوب",
+        "ku": "ئاسایش",
+        "ro": "Siguranță",
+        "ka": "უსაფრთხოება"
+      }
+    },
+    {
+      "key": "school_process",
+      "title": {
+        "fr": "Déroulement au collège",
+        "ar": "كيفية التلقيح في المدرسة",
+        "tr": "Okulda aşılama nasıl olur?",
+        "en": "How it works at school",
+        "ps": "په ښوونځي کې څنګه کېږي؟",
+        "ku": "لە قوتابخانە چۆنە؟",
+        "ro": "Desfășurarea la școală",
+        "ka": "ვაქცინაციის ჩატარება სკოლაში"
+      }
+    },
+    {
+      "key": "consent",
+      "title": {
+        "fr": "Consentement / choix",
+        "ar": "الموافقة / الاختيار",
+        "tr": "Onay / seçim",
+        "en": "Consent / choice",
+        "ps": "اجازه / انتخاب",
+        "ku": "ڕەزامەندی / هەڵبژاردن",
+        "ro": "Consimțământ / opțiune",
+        "ka": "თანხმობა / არჩევანი"
+      }
+    },
+    {
+      "key": "key_messages",
+      "title": {
+        "fr": "Messages clés",
+        "ar": "رسائل أساسية",
+        "tr": "Ana mesajlar",
+        "en": "Key messages",
+        "ps": "مهم پیغامونه",
+        "ku": "پەیامە گرنگەکان",
+        "ro": "Mesaje‑cheie",
+        "ka": "ძირითადი მესიჯები"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "q1",
+      "section": "general",
+      "q": {
+        "fr": "Qu’est-ce que la vaccination ?",
+        "ar": "ما هو التلقيح؟",
+        "tr": "Aşı nedir?",
+        "en": "What is vaccination?",
+        "ps": "واکسین څه شی دی؟",
+        "ku": "ڤاکسین چییە؟",
+        "ro": "Ce este vaccinarea?",
+        "ka": "რა არის ვაქცინაცია?"
+      },
+      "a": {
+        "fr": "La vaccination stimule le système immunitaire pour qu’il apprenne à se défendre contre une maladie grave, sans provoquer la maladie.",
+        "ar": "التلقيح يدرّب جهاز المناعة على التعرّف على المرض والوقاية منه دون التسبب بالمرض نفسه.",
+        "tr": "Aşı, bağışıklık sistemini eğiterek ciddi hastalıklara karşı koruma sağlar; hastalığı oluşturmaz.",
+        "en": "Vaccination trains the immune system to prevent serious disease without causing the disease itself.",
+        "ps": "واکسین د بدن دفاعي سیستم ته زده کړه ورکوي چې له خطرناکو ناروغیو څخه ځان وساتي، پرته له دې چې ناروغي رامنځته کړي.",
+        "ku": "ڤاکسین سیستەمی بەرگری جەستە فێر دەکات چۆن خۆی بپارێزێت لە نەخۆشییە توندەکان، بەبێ ئەوەی نەخۆشی دروست بکات.",
+        "ro": "Vaccinarea stimulează sistemul imunitar să învețe să se apere împotriva unei boli grave, fără a provoca boala.",
+        "ka": "ვაქცინაცია ასწავლის იმუნურ სისტემას როგორ დაიცვას თავი მძიმე დაავადებისგან, თავად დაავადების გამოწვევის გარეშე."
+      }
+    },
+    {
+      "id": "q2",
+      "section": "general",
+      "q": {
+        "fr": "Pourquoi vacciner un enfant en bonne santé ?",
+        "ar": "لماذا نلقّح طفلًا سليمًا؟",
+        "tr": "Neden sağlıklı çocuk aşılanır?",
+        "en": "Why vaccinate a healthy child?",
+        "ps": "ولې سالم ماشوم واکسین کېږي؟",
+        "ku": "بۆچی منداڵی تەندروست ڤاکسین دەکرێت؟",
+        "ro": "De ce să vaccinez un copil sănătos?",
+        "ka": "რატომ უნდა ავცრათ ჯანმრთელი ბავშვი?"
+      },
+      "a": {
+        "fr": "Parce que les vaccins protègent avant l’exposition. Ils sont plus efficaces tôt et évitent des maladies graves plus tard.",
+        "ar": "لأن اللقاحات تحمي قبل التعرّض للمرض، وتكون أكثر فعالية في سن مبكرة وتمنع أمراضًا خطيرة مستقبلًا.",
+        "tr": "Çünkü aşılar hastalık olmadan önce korur. Erken yaşta daha etkilidir ve ileride ciddi hastalıkları önler.",
+        "en": "Because vaccines work best before exposure. Early vaccination prevents serious disease later.",
+        "ps": "ځکه چې واکسین د ناروغۍ څخه مخکې ښه کار کوي او د راتلونکو جدي ناروغیو مخه نیسي.",
+        "ku": "چونکە ڤاکسین پێش تووشبوون کاریگەرترە و لە داهاتوودا نەخۆشییە توندەکان پێشگیری دەکات.",
+        "ro": "Pentru că vaccinurile protejează înainte de expunere. Sunt mai eficiente mai devreme și previn boli grave mai târziu.",
+        "ka": "რადგან ვაქცინები იცავს ჯერ კიდევ ინფექციასთან შეხვედრამდე. ისინი უფრო ეფექტურია ადრეულ ასაკში და მომავალში მძიმე დაავადებებს თავიდან აცილებს."
+      }
+    },
+    {
+      "id": "q3",
+      "section": "general",
+      "q": {
+        "fr": "Pourquoi vacciner à l’adolescence (collège) ?",
+        "ar": "لماذا في سن المراهقة/الإعدادية؟",
+        "tr": "Neden ergenlikte (ortaokulda)?",
+        "en": "Why vaccinate in early adolescence (middle school age)?",
+        "ps": "ولې په دې عمر کې (ښوونځي)؟",
+        "ku": "بۆچی لەم تەمەندا (قوتابخانە)؟",
+        "ro": "De ce să vaccinăm la adolescență (gimnaziu/coleghiu)?",
+        "ka": "რატომ ხდება ვაქცინაცია მოზარდობაში (კოლეჯში/სკოლაში)?"
+      },
+      "a": {
+        "fr": "À cet âge, la réponse immunitaire est très bonne et la vaccination est souvent faite avant l’exposition aux agents infectieux ciblés.",
+        "ar": "في هذا العمر تكون الاستجابة المناعية أفضل، وغالبًا يكون التلقيح قبل التعرّض للعدوى المستهدفة.",
+        "tr": "Bu yaşta bağışıklık yanıtı güçlü olur ve çoğu zaman hastalık etkenleriyle karşılaşmadan önce yapılır.",
+        "en": "At this age the immune response is strong, and vaccination often occurs before exposure to the targeted infections.",
+        "ps": "په دې عمر کې دفاعي سیستم ښه ځواب ورکوي او اکثره د ناروغۍ له مخ کېدو مخکې واکسین کېږي.",
+        "ku": "لەو تەمەنەدا بەرگری جەستە بەهێزە و زۆرجار پێش تووشبوون ڤاکسین دەکرێت.",
+        "ro": "La această vârstă, răspunsul imun este foarte bun, iar vaccinarea este adesea făcută înainte de expunerea la agenții infecțioși vizați.",
+        "ka": "ამ ასაკში იმუნური პასუხი ძალიან კარგია და ვაქცინაცია ხშირად ტარდება მიზნობრივ ინფექციურ აგენტებთან შეხვედრამდე."
+      }
+    },
+    {
+      "id": "q4",
+      "section": "hpv",
+      "q": {
+        "fr": "Qu’est-ce que le HPV ?",
+        "ar": "ما هو HPV؟",
+        "tr": "HPV nedir?",
+        "en": "What is HPV?",
+        "ps": "HPV څه شی دی؟",
+        "ku": "HPV چییە؟",
+        "ro": "Ce este HPV?",
+        "ka": "რა არის HPV?"
+      },
+      "a": {
+        "fr": "Le HPV (papillomavirus humain) est un virus très fréquent. Beaucoup de personnes y sont exposées au cours de leur vie, souvent sans symptômes.",
+        "ar": "فيروس الورم الحليمي البشري شائع جدًا، ويتعرّض له كثير من الناس خلال حياتهم غالبًا دون أعراض.",
+        "tr": "HPV çok yaygın bir virüstür. Pek çok kişi hayatında bir kez karşılaşır, çoğu zaman belirti olmaz.",
+        "en": "HPV is a very common virus. Many people are exposed during their life, often without symptoms.",
+        "ps": "HPV یو ډېر عام ویروس دی؛ ډېر خلک په ژوند کې ورسره مخ کېږي، اکثره پرته له نښو.",
+        "ku": "HPV ڤایرۆسێکی زۆر باوە. زۆربەی خەڵک لە ژیاندا پێی دەگیرن، زۆرجار بەبێ نیشانە.",
+        "ro": "HPV (papilomavirusul uman) este un virus foarte frecvent. Multe persoane sunt expuse de-a lungul vieții, adesea fără simptome.",
+        "ka": "HPV (ადამიანის პაპილომავირუსი) ძალიან გავრცელებული ვირუსია. ბევრ ადამიანს ცხოვრებაში ერთხელ მაინც აქვს შეხება, ხშირად სიმპტომების გარეშე."
+      }
+    },
+    {
+      "id": "q5",
+      "section": "hpv",
+      "q": {
+        "fr": "Quelles maladies le HPV peut-il provoquer ?",
+        "ar": "ما الأمراض التي قد يسببها HPV؟",
+        "tr": "HPV hangi hastalıklara yol açabilir?",
+        "en": "What diseases can HPV cause?",
+        "ps": "HPV کومې ناروغۍ رامنځته کوي؟",
+        "ku": "HPV چی دەتوانێت دروست بکات؟",
+        "ro": "Ce boli poate provoca HPV?",
+        "ka": "რა დაავადებებს იწვევს HPV?"
+      },
+      "a": {
+        "fr": "Certains types de HPV peuvent causer des cancers (col de l’utérus, gorge/ORL, anus, pénis) et des verrues génitales.",
+        "ar": "بعض أنواع HPV قد تسبب سرطانات (عنق الرحم، الحلق، الشرج، القضيب) وقد تسبب الثآليل التناسلية.",
+        "tr": "Bazı HPV tipleri kanserlere (rahim ağzı, boğaz/ORL, anal, penis) ve genital siğillere neden olabilir.",
+        "en": "Some HPV types can cause cancers (cervix, throat/ENT, anus, penis) and genital warts.",
+        "ps": "ځینې ډولونه سرطانونه (د رحم غاړه، ستونی، مقعد، تناسلي برخه) او تناسلي زګېلونه رامنځته کولی شي.",
+        "ku": "هەندێک جۆری HPV دەتوانێت شێرپەنجە (قژی، گەروو، مقعد، پیاوان) و زگەڵی تناسلی دروست بکات.",
+        "ro": "Anumite tipuri de HPV pot provoca cancere (col uterin, gât/ORL, anus, penis) și veruci genitale.",
+        "ka": "HPV‑ს ზოგიერთი ტიპი შეიძლება იწვევდეს კიბოს (საშვილოსნოს ყელი, ყელი/ENT, ანუსი, პენისი) და გენიტალურ მეჭეჭებს."
+      }
+    },
+    {
+      "id": "q6",
+      "section": "hpv",
+      "q": {
+        "fr": "Le vaccin HPV est-il lié à la sexualité ?",
+        "ar": "هل لقاح HPV مرتبط بالحياة الجنسية؟",
+        "tr": "HPV aşısı cinsellikle ilgili mi?",
+        "en": "Is the HPV vaccine related to sexuality?",
+        "ps": "ایا دا د جنسي اړیکو سره تړاو لري؟",
+        "ku": "ئایا پەیوەندی بە سێکسەوە هەیە؟",
+        "ro": "Vaccinul HPV are legătură cu sexualitatea?",
+        "ka": "HPV ვაქცინა უკავშირდება სექსუალობას?"
+      },
+      "a": {
+        "fr": "Non. C’est un vaccin de prévention contre un virus et contre des cancers futurs, pas un jugement sur les comportements.",
+        "ar": "لا. هو لقاح وقائي ضد فيروس وللوقاية من سرطانات مستقبلية، وليس له علاقة بالسلوك.",
+        "tr": "Hayır. Bu, bir virüse ve gelecekteki kanserlere karşı korunma aşısıdır; davranışla ilgili değildir.",
+        "en": "No. It’s a prevention vaccine against a virus and future cancers, not a judgment about behavior.",
+        "ps": "نه. دا د ویروس او راتلونکو سرطانونو د مخنیوي لپاره واکسین دی، د چلند سره تړاو نه لري.",
+        "ku": "نەخێر. ئەمە ڤاکسینی پێشگیرییە دژ بە ڤایرۆس و شێرپەنجەی داهاتوو؛ هیچ پەیوەندی بە هەڵسوکەوت نییە.",
+        "ro": "Nu. Este un vaccin de prevenție împotriva unui virus și a unor cancere viitoare, nu o judecată asupra comportamentelor.",
+        "ka": "არა. ეს არის პრევენციული ვაქცინა ვირუსისა და მომავალი კიბოების წინააღმდეგ და არა ქცევების შეფასება."
+      }
+    },
+    {
+      "id": "q7",
+      "section": "hpv",
+      "q": {
+        "fr": "Combien de doses pour le HPV ?",
+        "ar": "كم عدد جرعات HPV؟",
+        "tr": "HPV kaç doz?",
+        "en": "How many HPV doses?",
+        "ps": "د HPV څو دوزونه؟",
+        "ku": "HPV چەند دوز؟",
+        "ro": "Câte doze pentru HPV?",
+        "ka": "რამდენი დოზაა HPV‑სთვის?"
+      },
+      "a": {
+        "fr": "Le plus souvent 2 doses si le schéma est débuté entre 11 et 14 ans (les détails exacts dépendent de l’âge et du calendrier).",
+        "ar": "غالبًا جرعتان إذا بدأ التلقيح بين 11 و14 سنة (التفاصيل تعتمد على العمر والبرنامج).",
+        "tr": "Genelde 11–14 yaşta başlanırsa 2 doz (yaşa ve takvime göre değişebilir).",
+        "en": "Most often 2 doses when started between ages 11–14 (exact schedule depends on age and program).",
+        "ps": "اکثره که ۱۱–۱۴ کلونو کې پیل شي ۲ دوزه (کره مهال‌وېش د عمر له مخې بدلېږي).",
+        "ku": "زۆرجار ئەگەر لە 11–14 ساڵدا دەست پێبکات 2 دوزە (بەپێی تەمەن و پڕۆگرام دەگۆڕێت).",
+        "ro": "De cele mai multe ori, 2 doze dacă schema începe între 11 și 14 ani (detaliile exacte depind de vârstă și de calendar).",
+        "ka": "უმეტეს შემთხვევაში 2 დოზა, თუ სქემა იწყება 11–14 წლის ასაკში (ზუსტი დეტალები დამოკიდებულია ასაკსა და კალენდარზე)."
+      }
+    },
+    {
+      "id": "q8",
+      "section": "meningococcal",
+      "q": {
+        "fr": "Qu’est-ce que le méningocoque ?",
+        "ar": "ما هي المكورات السحائية؟",
+        "tr": "Meningokok nedir?",
+        "en": "What is meningococcus?",
+        "ps": "مېنینګوکوک څه شی دی؟",
+        "ku": "مێنینگۆکۆک چییە؟",
+        "ro": "Ce este meningococul?",
+        "ka": "რა არის მენინგოკოკი?"
+      },
+      "a": {
+        "fr": "C’est une bactérie qui peut provoquer une méningite et une septicémie (infection grave du sang).",
+        "ar": "هي بكتيريا قد تسبب التهاب السحايا وتعفن الدم (إنتان شديد).",
+        "tr": "Menenjit ve sepsis (kanda ciddi enfeksiyon) yapabilen bir bakteridir.",
+        "en": "A bacterium that can cause meningitis and sepsis (a severe blood infection).",
+        "ps": "دا باکتریا ده چې مننژیت او د وینې شدید انتان رامنځته کولی شي.",
+        "ku": "باکتریایەکە کە دەتوانێت مننژیت و هەڵچوونی خوێن (سێپسس) دروست بکات.",
+        "ro": "Este o bacterie care poate provoca meningită și septicemie (infecție gravă a sângelui).",
+        "ka": "ეს არის ბაქტერია, რომელიც შეიძლება გამოიწვიოს მენინგიტი და სეპტიცემია (სისხლის მძიმე ინფექცია)."
+      }
+    },
+    {
+      "id": "q9",
+      "section": "meningococcal",
+      "q": {
+        "fr": "Pourquoi c’est considéré comme grave ?",
+        "ar": "لماذا تعتبر خطيرة؟",
+        "tr": "Neden çok tehlikeli?",
+        "en": "Why is it considered serious?",
+        "ps": "ولې دا ناروغي خطرناکه ده؟",
+        "ku": "بۆچی مەترسیدارە؟",
+        "ro": "De ce este considerat grav?",
+        "ka": "რატომ ითვლება მძიმე დაავადებად?"
+      },
+      "a": {
+        "fr": "Ces infections peuvent évoluer très vite et nécessitent une urgence médicale. Elles peuvent laisser des séquelles graves et, rarement, être mortelles.",
+        "ar": "قد تتطور بسرعة وتحتاج إلى إسعاف عاجل، وقد تسبب مضاعفات خطيرة وقد تكون قاتلة في بعض الحالات.",
+        "tr": "Çok hızlı ilerleyebilir ve acil durumdur. Ağır kalıcı hasar yapabilir, nadiren ölümcül olabilir.",
+        "en": "They can progress very quickly and require emergency care; they may cause severe complications and, rarely, death.",
+        "ps": "دا ډېر ژر شدیده کېدای شي او بیړنۍ درملنې ته اړتیا لري؛ سخت عوارض او کله ناکله مرګ رامنځته کوي.",
+        "ku": "زۆر خێرا توند دەبێت و پێویستی بە پزیشکی فۆری هەیە؛ دەتوانێت تووشی ئازاری دایمی بکات و بە دەگمەنی کوشندە بێت.",
+        "ro": "Aceste infecții pot evolua foarte repede și necesită o urgență medicală. Pot lăsa sechele grave și, rar, pot fi mortale.",
+        "ka": "ეს ინფექციები შეიძლება ძალიან სწრაფად განვითარდეს და მოითხოვს გადაუდებელ დახმარებას. შეიძლება დატოვოს მძიმე გართულებები და იშვიათად ფატალურიც იყოს."
+      }
+    },
+    {
+      "id": "q10",
+      "section": "meningococcal",
+      "q": {
+        "fr": "Combien de doses pour le méningocoque ?",
+        "ar": "كم عدد جرعات المكورات السحائية؟",
+        "tr": "Meningokok kaç doz?",
+        "en": "How many meningococcal doses?",
+        "ps": "د مننژیت څو دوزونه؟",
+        "ku": "مننژیت چەند دوز؟",
+        "ro": "Câte doze pentru meningococ?",
+        "ka": "რამდენი დოზაა მენინგოკოკზე?"
+      },
+      "a": {
+        "fr": "En général, une seule dose est nécessaire entre 11 et 14 ans. L’analyse du carnet de santé de votre enfant permettra d’évaluer s’il en a besoin.",
+        "en": "In general, only one dose is needed between 11 and 14 years of age. Reviewing your child’s health record will help determine whether the vaccine is required.",
+        "ar": "بشكل عام، تكون جرعة واحدة كافية بين سن 11 و14 عامًا. يساعد فحص الدفتر الصحي لطفلك في تحديد ما إذا كان بحاجة إلى اللقاح.",
+        "tr": "Genellikle 11 ile 14 yaş arasında tek bir doz yeterlidir. Çocuğunuzun sağlık karnesinin incelenmesi, aşıya ihtiyaç olup olmadığını belirlemeye yardımcı olur.",
+        "ps": "عموماً، د ۱۱ او ۱۴ کلونو ترمنځ یوه دوزه کافي ده. د ماشوم د روغتیا کارت ارزونه به دا معلومه کړي چې واکسین ته اړتیا شته که نه.",
+        "ku": "بە گشتی، تەنها یەک دوز لە نێوان ١١ بۆ ١٤ ساڵدا پێویستە. پشکنینی تۆماری تەندروستی منداڵەکەت یارمەتیدەرە بۆ دیاریکردنی پێویستی بە واکسین.",
+        "ro": "În general, este necesară o singură doză între 11 și 14 ani. Verificarea carnetului de sănătate al copilului va permite evaluarea necesității.",
+        "ka": "ჩვეულებრივ საჭიროა მხოლოდ ერთი დოზა 11–14 წლის ასაკში. ბავშვის ჯანმრთელობის წიგნაკის შემოწმება დაგვეხმარება დადგინდეს, სჭირდება თუ არა."
+      }
+    },
+    {
+      "id": "q11",
+      "section": "safety",
+      "q": {
+        "fr": "Les vaccins sont-ils sûrs ?",
+        "ar": "هل اللقاحات آمنة؟",
+        "tr": "Aşılar güvenli mi?",
+        "en": "Are the vaccines safe?",
+        "ps": "واکسینونه خوندي دي؟",
+        "ku": "ڤاکسینەکان ئاسایشەن؟",
+        "ro": "Vaccinurile sunt sigure?",
+        "ka": "ვაქცინები უსაფრთხოა?"
+      },
+      "a": {
+        "fr": "Oui. Ils sont testés avant autorisation et surveillés en continu après, avec un suivi des effets indésirables.",
+        "ar": "نعم. تُختبر قبل الترخيص وتُراقب باستمرار بعده مع متابعة الآثار الجانبية.",
+        "tr": "Evet. Onaydan önce test edilir ve sonrasında sürekli izlenir; yan etkiler takip edilir.",
+        "en": "Yes. They are tested before authorization and continuously monitored afterward, including side-effect reporting systems.",
+        "ps": "هو. د اجازه څخه مخکې ازمویل کېږي او وروسته هم دوامداره څارل کېږي، عوارض ثبت او څارل کېږي.",
+        "ku": "بەڵێ. پێش ڕێپێدان تاقیکردنەوە دەکرێت و دوایدا بەردەوام چاودێری دەکرێت و کاریگەرییە لاوەکییەکان تۆمار دەکرێن.",
+        "ro": "Da. Sunt testate înainte de autorizare și sunt monitorizate continuu după, cu supravegherea reacțiilor adverse.",
+        "ka": "დიახ. ისინი ტესტირდება ავტორიზაციამდე და შემდეგაც მუდმივად კონტროლდება, არასასურველი მოვლენების მონიტორინგით."
+      }
+    },
+    {
+      "id": "q12",
+      "section": "safety",
+      "q": {
+        "fr": "Quels effets secondaires sont fréquents ?",
+        "ar": "ما الآثار الجانبية الشائعة؟",
+        "tr": "Sık yan etkiler neler?",
+        "en": "What common side effects can happen?",
+        "ps": "عام عوارض کوم دي؟",
+        "ku": "کاریگەری لاوەکیی باو چییە؟",
+        "ro": "Ce reacții adverse sunt frecvente?",
+        "ka": "რა გვერდითი ეფექტებია ხშირად?"
+      },
+      "a": {
+        "fr": "Douleur au bras, rougeur, petite fatigue. En général, c’est léger et ça disparaît en 1–2 jours.",
+        "ar": "ألم في الذراع، احمرار، تعب خفيف. غالبًا خفيفة وتزول خلال يوم أو يومين.",
+        "tr": "Kol ağrısı, kızarıklık, hafif yorgunluk. Genelde hafiftir ve 1–2 günde geçer.",
+        "en": "Sore arm, redness/swelling, mild tiredness. Usually mild and resolves within 1–2 days.",
+        "ps": "د لاس درد، لږ سوروالی، لږ ستړیا—اکثره سپک وي او ۱–۲ ورځو کې ختمېږي.",
+        "ku": "ئازاری دەست، سووربوون/ورم، ماندووبوونی کەم—زۆرجار سپووکە و لە 1–2 ڕۆژدا دەچێت.",
+        "ro": "Durere la braț, roșeață, ușoară oboseală. De obicei este ușor și dispare în 1–2 zile.",
+        "ka": "ხელის ტკივილი, სიწითლე, მცირე დაღლილობა. ჩვეულებრივ მსუბუქია და 1–2 დღეში გადის."
+      }
+    },
+    {
+      "id": "q13",
+      "section": "safety",
+      "q": {
+        "fr": "Existe-t-il des effets graves ?",
+        "ar": "هل توجد آثار خطيرة؟",
+        "tr": "Ciddi yan etki olur mu?",
+        "en": "Are serious side effects possible?",
+        "ps": "جدي عوارض شته؟",
+        "ku": "کاریگەری توند هەیە؟",
+        "ro": "Există reacții grave?",
+        "ka": "არის თუ არა მძიმე გვერდითი ეფექტები?"
+      },
+      "a": {
+        "fr": "Ils sont exceptionnels. Comme pour tout médicament, un risque très rare existe et il est surveillé de près.",
+        "ar": "نادرة جدًا. مثل أي دواء، قد توجد مخاطر نادرة جدًا وتُراقب بدقة.",
+        "tr": "Çok nadirdir. Her ilaçta olduğu gibi çok nadir risk vardır ve yakından takip edilir.",
+        "en": "They are very rare. As with any medicine, rare risks exist and are closely monitored.",
+        "ps": "ډېر نادر دي. لکه د هر درمل په شان، ډېر لږ خطر شته او نږدې څارل کېږي.",
+        "ku": "زۆر دەگمەنان. وەک هەر دەرمانێک، ریسکێکی زۆر دەگمەنی هەیە و بە نزیک چاودێری دەکرێت.",
+        "ro": "Sunt excepționale. Ca pentru orice medicament, există un risc foarte rar, care este atent monitorizat.",
+        "ka": "ეს ძალიან იშვიათია. როგორც ნებისმიერ წამალზე, არსებობს ძალიან იშვიათი რისკი, რომელიც მკაცრად კონტროლდება."
+      }
+    },
+    {
+      "id": "q14",
+      "section": "safety",
+      "q": {
+        "fr": "Le vaccin peut-il rendre stérile ?",
+        "ar": "هل يسبب العقم؟",
+        "tr": "Kısırlık yapar mı?",
+        "en": "Can it cause infertility?",
+        "ps": "ایا شنډوالی رامنځته کوي؟",
+        "ku": "ئایا ناباروری دروست دەکات؟",
+        "ro": "Vaccinul poate provoca sterilitate?",
+        "ka": "ვაქცინამ შეიძლება უნაყოფობა გამოიწვიოს?"
+      },
+      "a": {
+        "fr": "Non. Il n’y a pas de preuve scientifique fiable montrant un lien entre ces vaccins et l’infertilité.",
+        "ar": "لا. لا توجد أدلة علمية موثوقة تربط هذه اللقاحات بالعقم.",
+        "tr": "Hayır. Bu aşılar ile kısırlık arasında güvenilir bilimsel kanıt yoktur.",
+        "en": "No. There is no reliable scientific evidence linking these vaccines to infertility.",
+        "ps": "نه. د دې واکسینونو او نابارورۍ تر منځ د باور وړ علمي ثبوت نشته.",
+        "ku": "نەخێر. هیچ بەڵگەی زانستیی باوەڕپێکراو نییە کە ئەم ڤاکسینانە بە ناباروری پەیوەست بکات.",
+        "ro": "Nu. Nu există dovezi științifice fiabile care să arate o legătură între aceste vaccinuri și infertilitate.",
+        "ka": "არა. არ არსებობს სანდო სამეცნიერო მტკიცებულება, რომ ამ ვაქცინებს უნაყოფობასთან კავშირი აქვთ."
+      }
+    },
+    {
+      "id": "q15",
+      "section": "school_process",
+      "q": {
+        "fr": "Qui vaccine mon enfant au collège ?",
+        "ar": "من يلقّح طفلي في المدرسة؟",
+        "tr": "Okulda aşıyı kim yapıyor?",
+        "en": "Who vaccinates my child at school?",
+        "ps": "په ښوونځي کې څوک واکسین ورکوي؟",
+        "ku": "لە قوتابخانە کێ ڤاکسین دەدات؟",
+        "ro": "Cine îmi vaccinează copilul la școală?",
+        "ka": "ვინ აცრის ჩემს შვილს სკოლაში?"
+      },
+      "a": {
+        "fr": "Des professionnels de santé qualifiés (infirmiers/ères, médecins) formés à la vaccination.",
+        "ar": "مهنيون صحيون مؤهلون (ممرضون/أطباء) مدرّبون على التلقيح.",
+        "tr": "Aşı eğitimi almış sağlık profesyonelleri (hemşire/doktor).",
+        "en": "Qualified healthcare professionals (nurses/doctors) trained in vaccination.",
+        "ps": "مسلکي روغتیايي کارکوونکي (نرسان/ډاکټران) چې واکسین ورکولو کې روزل شوي.",
+        "ku": "پزیشک و پەرستاری پسپۆڕ و فێرکاری‌کراو لە ڤاکسین.",
+        "ro": "Profesioniști de sănătate calificați (asistenți/te, medici) instruiți pentru vaccinare.",
+        "ka": "კვალიფიციური ჯანდაცვის პროფესიონალები (მედდები/ექიმები), რომლებიც ვაქცინაციაზე არიან მომზადებული."
+      }
+    },
+    {
+      "id": "q16",
+      "section": "school_process",
+      "q": {
+        "fr": "Est-ce aussi sûr qu’en cabinet ?",
+        "ar": "هل هو آمن مثل العيادة؟",
+        "tr": "Muayenehane kadar güvenli mi?",
+        "en": "Is it as safe as in a clinic?",
+        "ps": "ایا د کلینیک په شان خوندي دی؟",
+        "ku": "وەک نەخۆشخانە/کلینیک ئاسایشە؟",
+        "ro": "Este la fel de sigur ca la cabinet?",
+        "ka": "ისევე უსაფრთხოა როგორც ექიმის კაბინეტში?"
+      },
+      "a": {
+        "fr": "Oui. Les mêmes règles d’hygiène, de sécurité, de traçabilité et de surveillance après injection sont appliquées.",
+        "ar": "نعم. نفس قواعد النظافة والسلامة والتوثيق والمراقبة بعد الحقن تُطبق.",
+        "tr": "Evet. Aynı hijyen, güvenlik, kayıt ve aşı sonrası izlem kuralları uygulanır.",
+        "en": "Yes. The same hygiene, safety, documentation, and post-vaccination observation procedures are used.",
+        "ps": "هو. د پاکوالي، خوندیتوب، ثبت او د واکسین وروسته څارنې قواعد هماغه دي.",
+        "ku": "بەڵێ. هەمان یاساکانی پاکیزەیی، ئاسایش، تۆمارکردن و چاودێری دوای دەستپێدان بەکار دەهێنرێت.",
+        "ro": "Da. Se aplică aceleași reguli de igienă, siguranță, trasabilitate și supraveghere după injectare.",
+        "ka": "დიახ. გამოიყენება იგივე ჰიგიენის, უსაფრთხოების, ტრასაბელურობის და ინექციის შემდეგ დაკვირვების წესები."
+      }
+    },
+    {
+      "id": "q17",
+      "section": "school_process",
+      "q": {
+        "fr": "Le carnet de santé est-il vérifié ?",
+        "ar": "هل يتم التحقق من دفتر التلقيح؟",
+        "tr": "Aşı karnesi kontrol ediliyor mu?",
+        "en": "Will the vaccine record be checked?",
+        "ps": "ایا د واکسین کارت/ریکارډ کتل کېږي؟",
+        "ku": "ئایا کارتی ڤاکسین دەبینرێت؟",
+        "ro": "Se verifică carnetul de sănătate?",
+        "ka": "შემოწმდება თუ არა ჯანმრთელობის წიგნაკი?"
+      },
+      "a": {
+        "fr": "Oui. Cela évite les injections inutiles et permet de compléter uniquement les doses manquantes si besoin.",
+        "ar": "نعم. لتجنب أي جرعة غير ضرورية ولإكمال الجرعات الناقصة فقط عند الحاجة.",
+        "tr": "Evet. Gereksiz aşı yapılmaz; gerekiyorsa sadece eksik dozlar tamamlanır.",
+        "en": "Yes. This avoids unnecessary doses and helps complete only missing doses if needed.",
+        "ps": "هو. بېځایه دوزونه نه ورکول کېږي؛ که اړتیا وي یوازې پاتې دوزونه پوره کېږي.",
+        "ku": "بەڵێ. دوزی پێویست‌نەبوو نا دەدرێت؛ ئەگەر پێویست بوو تەنها دوزە کەمەکان تەواو دەکرێن.",
+        "ro": "Da. Astfel se evită injecțiile inutile și se completează doar dozele lipsă, dacă este necesar.",
+        "ka": "დიახ. ეს თავიდან გვაცილებს ზედმეტ ინექციებს და საჭიროების შემთხვევაში ავსებს მხოლოდ გამოტოვებულ დოზებს."
+      }
+    },
+    {
+      "id": "q18",
+      "section": "consent",
+      "q": {
+        "fr": "Est-ce obligatoire ?",
+        "ar": "هل هو إجباري؟",
+        "tr": "Zorunlu mu?",
+        "en": "Is it mandatory?",
+        "ps": "ایا اجباري دی؟",
+        "ku": "ئایا زۆرەکییە؟",
+        "ro": "Este obligatoriu?",
+        "ka": "სავალდებულოა?"
+      },
+      "a": {
+        "fr": "Non. C’est recommandé, mais la vaccination n’est pas imposée.",
+        "ar": "لا. هو موصى به لكنه غير مفروض.",
+        "tr": "Hayır. Önerilir ama zorunlu değildir.",
+        "en": "No. It is recommended, but not forced.",
+        "ps": "نه. سپارښتنه کېږي خو اجباري نه دی.",
+        "ku": "نەخێر. پێشنیارکراوە بەڵام زۆرەکی نییە.",
+        "ro": "Nu. Este recomandat, dar vaccinarea nu este impusă.",
+        "ka": "არა. რეკომენდებულია, მაგრამ ვაქცინაცია არ არის იძულებითი."
+      }
+    },
+    {
+      "id": "q19",
+      "section": "consent",
+      "q": {
+        "fr": "Puis-je refuser ?",
+        "ar": "هل يمكنني الرفض؟",
+        "tr": "Reddedebilir miyim?",
+        "en": "Can I refuse?",
+        "ps": "زه ردولی شم؟",
+        "ku": "دەتوانم ڕەت بکەم؟",
+        "ro": "Pot refuza?",
+        "ka": "შეიძლება უარი ვთქვა?"
+      },
+      "a": {
+        "fr": "Oui. Le choix parental est respecté. Vous pouvez poser toutes vos questions avant de décider.",
+        "ar": "نعم. يُحترم قرار الأهل ويمكنكم طرح الأسئلة قبل اتخاذ القرار.",
+        "tr": "Evet. Aile kararı saygıyla karşılanır. Karar vermeden önce soru sorabilirsiniz.",
+        "en": "Yes. Parental choice is respected. You can ask questions before deciding.",
+        "ps": "هو. د والدینو پرېکړه درناوی کېږي. د پرېکړې مخکې پوښتنې کولای شئ.",
+        "ku": "بەڵێ. هەڵبژاردنی دایک و باوک ڕێز لێ دەگیرێت. پێش بڕیار دەتوانن پرسیار بکەن.",
+        "ro": "Da. Alegerea părinților este respectată. Puteți pune toate întrebările înainte de a decide.",
+        "ka": "დიახ. მშობლების არჩევანი პატივს სცემენ. გადაწყვეტილებამდე შეგიძლიათ დასვათ ყველა კითხვა."
+      }
+    },
+    {
+      "id": "q20",
+      "section": "consent",
+      "q": {
+        "fr": "Y a-t-il besoin d’une autorisation parentale ?",
+        "ar": "هل يلزم إذن الوالدين؟",
+        "tr": "Aile izni gerekli mi?",
+        "en": "Is parental consent required?",
+        "ps": "ایا د والدینو اجازه پکار ده؟",
+        "ku": "ئایا ڕەزامەندی دایک و باوک پێویستە؟",
+        "ro": "Este nevoie de autorizație parentală?",
+        "ka": "საჭიროა თუ არა მშობლის თანხმობა?"
+      },
+      "a": {
+        "fr": "Oui. Sans autorisation parentale, la vaccination ne sera pas réalisée.",
+        "ar": "نعم. بدون موافقة الوالدين لن يتم التلقيح.",
+        "tr": "Evet. Aile onayı olmadan aşı yapılmaz.",
+        "en": "Yes. Without parental consent, vaccination will not be performed.",
+        "ps": "هو. د والدینو له اجازې پرته واکسین نه کېږي.",
+        "ku": "بەڵێ. بەبێ ڕەزامەندی دایک و باوک ڤاکسین ناکرێت.",
+        "ro": "Da. Fără autorizație parentală, vaccinarea nu va fi realizată.",
+        "ka": "დიახ. მშობლის თანხმობის გარეშე ვაქცინაცია არ ჩატარდება."
+      }
+    },
+    {
+      "id": "q21",
+      "section": "key_messages",
+      "q": {
+        "fr": "Quel est le message principal à retenir ?",
+        "ar": "ما الرسالة الأساسية؟",
+        "tr": "Ana mesaj nedir?",
+        "en": "What is the main message to remember?",
+        "ps": "اصلي پیغام څه دی؟",
+        "ku": "پەیامی سەرەکی چییە؟",
+        "ro": "Care este mesajul principal de reținut?",
+        "ka": "რა არის მთავარი მესიჯი?"
+      },
+      "a": {
+        "fr": "Vacciner aujourd’hui, c’est protéger la santé de son enfant pour demain contre des maladies graves (cancers, méningites).",
+        "ar": "التلقيح اليوم هو حماية لصحة طفلك غدًا من أمراض خطيرة (سرطانات، التهاب سحايا).",
+        "tr": "Bugün aşı, yarın sağlık: kanser ve menenjit gibi ciddi hastalıklara karşı koruma.",
+        "en": "Vaccinating today helps protect your child tomorrow from serious diseases (cancers, meningitis).",
+        "ps": "نن واکسین، سبا روغتیا: له جدي ناروغیو (سرطان، مننژیت) څخه ساتنه.",
+        "ku": "ئەمڕۆ ڤاکسین، سبەی تەندروستی: پاراستن لە نەخۆشییە توندەکان (شێرپەنجە، مننژیت).",
+        "ro": "A vaccina astăzi înseamnă a proteja sănătatea copilului pentru mâine împotriva unor boli grave (cancere, meningite).",
+        "ka": "დღეს ვაქცინაცია ნიშნავს თქვენი ბავშვის ჯანმრთელობის დაცვას ხვალისთვის მძიმე დაავადებებისგან (კიბო, მენინგიტი)."
+      }
+    }
+  ]
+}

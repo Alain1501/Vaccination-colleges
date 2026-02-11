@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <title>Vaccination collège – Île-de-France</title>
+        <meta name="description" content="Site officiel d’information de l’Équipe Mobile de Vaccination (EMV) – Campagne de vaccination en milieu scolaire (collèges) en Île-de-France. Ressources sanitaires, documents officiels et informations à destination des familles et des établissements."/>
+        <meta name="keywords" content="vaccination, collège, santé publique, équipe mobile de vaccination, EMV, HPV, méningite, ARS, éducation nationale"/>
+        <meta name="author" content="Équipe Mobile de Vaccination – Santé publique"/>
+        <meta name="robots" content="index, follow"/>
+        <meta name="category" content="Health"/>
+        <meta name="classification" content="Public Health Information"/>
+        <meta name="audience" content="Families, Educational institutions, Health professionals"/>
+        <style>:root { --bg: #f5f7fb; --card: #ffffff; --text: #111827; --muted: #6b7280; --border: #e5e7eb; --primary: #2563eb; --primary-soft: #e0e7ff; --accent: #16a34a; --accent-soft: #dcfce7; --btn: #ffffff; } [data-theme="dark"] { --bg: #141c2f;  /* fond général un peu plus clair */ --card: #1a2238;  /* cartes légèrement relevées */ --text: #e5e7eb; --muted: #9ca3af; --border: #1f2937; --primary: #38bdf8; --primary-soft: #0c4a6e; --accent: #22c55e; --accent-soft: #052e1b; --btn: #020617; } body { background: var(--bg); color: var(--text); } .card, details, .search, .select { background: var(--card); color: var(--text); border-color: var(--border); } summary { color: var(--text); } .ans { color: #d1d5db; } .chip, .tag { background: #020617; border-color: var(--border); color: #cbd5f5; } .langBtn { background: #020617; color: var(--text); border-color: var(--border); } .langBtn.active { background: var(--primary-soft); color: #e0f2fe; } .navItem:hover { background: #020617; border-color: rgba(56,189,248,.25); } .navItem.active { background: var(--primary-soft); border-color: rgba(56,189,248,.35); } .btn.primary { background: var(--primary); border-color: rgba(56,189,248,.45); } .btn.soft { background: var(--accent-soft); border-color: rgba(34,197,94,.35); color: #bbf7d0; } * { box-sizing: border-box; } body { margin: 0; font-family: var(--font); color: var(--text); background: var(--bg); } a { color: inherit; } .layout { display: flex; min-height: 100vh; } /* Sidebar */.sidebar { width: var(--sidebar); padding: 18px 14px; position: sticky; top: 0; height: 100vh; overflow: auto; border-right: 1px solid var(--border); background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%); } .brand { display: flex; align-items: center; gap: 10px; padding: 10px 10px 14px 10px; } .brandMark { width: 36px; height: 36px; border-radius: 12px; background: var(--primary-soft); display: grid; place-items: center; color: var(--primary); font-weight: 800; border: 1px solid rgba(47,91,255,.18); } .brandName { font-weight: 800; letter-spacing: .2px; } .navTitle { margin: 8px 10px 8px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); } .navList { display: flex; flex-direction: column; gap: 6px; padding: 0 6px 16px; } .navItem { border: 1px solid transparent; padding: 10px 10px; border-radius: 12px; cursor: pointer; color: #1f2937; display: flex; align-items: center; justify-content: space-between; gap: 10px; } .navItem:hover { background: #f4f7ff; border-color: rgba(47,91,255,.14); } .navItem.active { background: var(--primary-soft); border-color: rgba(47,91,255,.22); } .chip { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: #f3f4f6; color: #374151; border: 1px solid var(--border); white-space: nowrap; } .footNote { padding: 12px 10px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--border); margin-top: 10px; } /* Main */.main { flex: 1; padding: 18px; } .topbar { max-width: var(--max); margin: 0 auto 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; } .rightBar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; } /* ===== FIX CENTRAGE LANGUES DANS TOPBAR ===== */.topbar { justify-content: center !important; } .burger { position: absolute; left: 18px; } .rightBar { justify-content: center; } .search { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 12px; background: #fff; min-width: 260px; } .search input { border: none; outline: none; width: 100%; font-size: 14px; } .container { max-width: var(--max); margin: 0 auto; } .hero { display: block; margin-bottom: 16px; } .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); } .heroText { padding: 22px; } .kicker { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; background: var(--primary-soft); color: var(--primary); font-weight: 800; border: 1px solid rgba(47,91,255,.18); font-size: 12px; letter-spacing: .02em; } h1 { margin: 12px 0 10px; font-size: 46px; line-height: 1.08; letter-spacing: -.02em; } h1 .accent { color: var(--accent); } .subtitle { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.55; max-width: 62ch; } .btnRow { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; } .btn { display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; border-radius: 999px; border: 1px solid var(--border); background: #fff; text-decoration: none; font-weight: 800; font-size: 13px; cursor: pointer; transition: transform .05s ease; } .btn:hover { transform: translateY(-1px); } .btn.primary { background: var(--primary); border-color: rgba(47,91,255,.45); color: #fff; } .btn.soft { background: var(--accent-soft); border-color: rgba(255,138,0,.22); color: #7a3a00; } .heroArt { padding: 18px; position: relative; overflow: hidden; } .artBox { height: 100%; border-radius: 16px; background: radial-gradient(circle at 20% 20%, rgba(47,91,255,.15), transparent 45%),
+                  radial-gradient(circle at 70% 30%, rgba(255,138,0,.18), transparent 55%),
+                  linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%); border: 1px solid rgba(17,24,39,.06); display: flex; align-items: center; justify-content: center; position: relative; min-height: 240px; } .artLabel { position: absolute; bottom: 14px; left: 14px; right: 14px; padding: 10px 12px; border-radius: 14px; background: rgba(255,255,255,.85); border: 1px solid rgba(17,24,39,.08); color: var(--muted); font-size: 12px; } .logoImg { height: 38px; max-width: 220px; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,.12)); margin-bottom: 10px; } /* Sections */.grid { display: grid; grid-template-columns: 1fr; gap: 16px; } .sectionHead { padding: 18px 20px 0; } .sectionTitle { margin: 0; font-size: 16px; font-weight: 900; letter-spacing: .2px; } .sectionDesc { margin: 6px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; } .sectionBody { padding: 14px 20px 20px; } .resourceGroup { display: flex; flex-wrap: wrap; gap: 10px; } .note { margin-top: 10px; color: var(--muted); font-size: 12px; line-height: 1.55; white-space: pre-wrap; } /* FAQ */.faqMeta { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; flex-wrap: wrap; } .faqTitle { margin: 0; font-size: 18px; font-weight: 900; } .faqCount { color: var(--muted); font-size: 12px; margin-top: 6px; } .accordion { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; } details { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 12px 14px; } summary { cursor: pointer; list-style: none; font-weight: 850; display: flex; align-items: center; justify-content: space-between; gap: 10px; } summary::-webkit-details-marker { display: none; } .ans { color: #374151; font-size: 14px; line-height: 1.6; margin-top: 10px; white-space: pre-wrap; } .tagRow { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; } .tag { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: #f3f4f6; border: 1px solid var(--border); color: #374151; } /* Mobile */.burger { display: none; padding: 10px 12px; border: 1px solid var(--border); border-radius: 12px; background: #fff; font-weight: 800; cursor: pointer; } @media (max-width: 980px){ .hero {  grid-template-columns: 1fr; }  h1 {  font-size: 38px; }  .sidebar {  position: fixed;  left: -320px;  top: 0;  bottom: 0;  z-index: 50;  transition: left .2s ease; }  .sidebar.open {  left: 0; }  .burger {  display: inline-flex; }  .search {  min-width: 200px; } } /* ===== UI adjustments (no sidebar, no search) ===== */.sidebar { display: none !important; } .burger { display: none !important; } .search { display: none !important; } .layout { grid-template-columns: 1fr !important; } .main { padding-left: 0 !important; } .select { padding: 12px 16px !important; border-radius: 14px !important; font-size: 15px !important; min-width: 180px; } /* ===== RTL languages support (Arabic, Pashto, Kurdish) ===== */.rtl { direction: rtl; text-align: right; } .rtl .hero, .rtl .card, .rtl .sectionBody, .rtl .sectionTitle, .rtl .sectionDesc, .rtl p, .rtl li, .rtl .faqQ, .rtl .faqA { text-align: right; } /* Language buttons */.langButtons { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; align-items: center; } .langBtn { border: 1px solid rgba(0,0,0,.12); background: #fff; color: var(--text); padding: 8px 10px; border-radius: 999px; cursor: pointer; font-size: 13px; font-weight: 700; line-height: 1; display: flex; gap: 6px; align-items: center; } .langBtn:hover { box-shadow: 0 2px 10px rgba(0,0,0,.08); } .langBtn.active { background: var(--primary-light); border-color: rgba(0,95,115,.35); } /* ===============================
+   THEME FIX – A COLLER ICI
+   =============================== */body { background: var(--bg); color: var(--text); } .card, details, .search, .select { background: var(--card) !important; color: var(--text) !important; border: 1px solid var(--border) !important; } summary { color: var(--text) !important; } .ans { color: var(--text) !important; } .btn { background: var(--btn) !important; color: var(--text) !important; border-color: var(--border) !important; } .btn.primary { background: var(--primary) !important; color: #ffffff !important; } .btn.soft { background: var(--accent-soft) !important; color: var(--accent) !important; } .chip, .tag { background: var(--primary-soft) !important; color: var(--text) !important; border-color: var(--border) !important; } details[open] { border-color: var(--primary) !important; } .artBox { background: linear-gradient(
+    180deg,
+    var(--card) 0%,
+    var(--bg) 100%
+  ) !important; } /* ===== BANDE LOGOS INSTITUTIONNELS ===== */.institutional-logos { display: flex; justify-content: center; align-items: center; gap: 32px; height: 90px;  /* ≈ 5–6 cm */ padding: 10px 20px; background: var(--bg); border-bottom: 1px solid var(--border); } .institutional-logos img { max-height: 70px; width: auto; object-fit: contain; } /* ===== RESPONSIVE LOGOS – MOBILE ===== */@media (max-width: 768px) { .institutional-logos {  flex-wrap: wrap;   /* autorise le retour à la ligne */  height: auto;   /* supprime la contrainte fixe */  gap: 16px;  padding: 12px 10px; }  .institutional-logos img {  max-height: 48px;   /* logos plus petits sur mobile */  max-width: 45%; } } /* ===== FIX LANG BUTTONS – DARK MODE ===== */[data-theme="dark"] .langBtn { background: var(--card) !important; color: var(--text) !important; border-color: var(--border) !important; } [data-theme="dark"] .langBtn.active { background: var(--primary) !important; color: #ffffff !important; } /* ===== CONTACT SECTION WIDE ===== */.contactWide { padding-top: 20px; } .contactGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; } .contactItem { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 16px; background: var(--card); border: 1px solid var(--border); color: var(--text); text-decoration: none; font-weight: 700; transition: background .15s ease, transform .05s ease; } .contactItem:hover { background: var(--primary-soft); transform: translateY(-1px); } .contactIcon { font-size: 20px; } .contactText { line-height: 1.35; } /* ===== SCHÉMA : Vaccination en 3 étapes ===== */.stepsContainer { display: flex; flex-direction: column; gap: 14px; } .stepItem { display: flex; align-items: flex-start; gap: 14px; padding: 16px; border-radius: 16px; background: var(--card); border: 1px solid var(--border); } /* ===== VISIBILITÉ FORCÉE DES ÉTAPES ===== */.stepItem { background: var(--card) !important; opacity: 1 !important; } .stepItem:hover { background: var(--primary-soft); cursor: pointer; } .stepNumber { width: 36px; height: 36px; border-radius: 999px; background: var(--primary); color: #fff; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; } .stepTitle { font-weight: 900; font-size: 15px; margin-bottom: 4px; } .stepText { font-size: 13px; line-height: 1.5; color: var(--muted); } /* ===== AFFICHAGE DES BOUTONS PAR ÉTAPE ===== */.stepActions { margin-top: 12px; padding: 14px; border-radius: 14px; background: var(--card); border: 1px solid var(--border); } .stepActions .resourceGroup { display: flex; flex-wrap: wrap; gap: 10px; } /* ===== HERO CENTRÉ (titre, texte, boutons) ===== */.heroText { text-align: center; } .heroText .btnRow { justify-content: center; } .heroText .kicker { margin-left: auto; margin-right: auto; } /* ===== HERO : centrage du sous-titre ===== */#heroSubtitle { text-align: center; margin-left: auto; margin-right: auto; max-width: 70ch; } /* ===== MASQUAGE DES BOUTONS DANS INTRO ===== */#introBody .resourceGroup, #introBody .btn { display: none !important; } /* ===== MASQUAGE TITRE MÉNINGITE DANS INTRO ===== */#introBody > div[style*="font-weight"] { display: none !important; } /* ===== PULSE VISUEL DES ÉTAPES (INCITATION AU CLIC) ===== */.stepItem { position: relative; transition: box-shadow 0.3s ease, transform 0.3s ease; } .stepItem.pulse { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.6); animation: stepPulse 1.2s ease-out; } @keyframes stepPulse { 0% {  box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.6);  transform: scale(1); }  60% {  box-shadow: 0 0 0 10px rgba(56, 189, 248, 0);  transform: scale(1.015); }  100% {  box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);  transform: scale(1); } } /* ===== AJUSTEMENT MOBILE ===== */@media (max-width: 768px) { .stepItem.pulse {  animation-duration: 1.4s; } } /* ===== FIX TAILLE + POSITION ICONES ÉTAPES ===== */.stepItem { display: flex; align-items: flex-start; gap: 14px; } .stepIllustration { width: 56px; height: 56px; min-width: 56px; max-width: 56px; object-fit: contain; flex-shrink: 0; }
+.stepIllustration {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  max-width: 56px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ===== AUTORISER LA BARRE DE RECHERCHE PLANNING ===== */
+#scheduleSearchSection .search {
+  display: flex !important;
+}
+/* ===== BARRE DE RECHERCHE PLANNING – STYLE PILULE ===== */
+#scheduleSearchSection .search {
+  padding: 16px 22px !important;
+  border-radius: 999px !important;
+  min-height: 56px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+#scheduleSearchSection .search input {
+  font-size: 16px;
+  padding: 6px 0;
+}
+
+/* ===== MASQUAGE TEMPORAIRE DU TOGGLE THÈME ===== */
+#themeToggle {
+  display: none !important;
+}
+/* ===== FIX LANG BUTTONS – LIGHT MODE ===== */
+[data-theme="light"] .langBtn {
+  background: #ffffff;
+  color: #111827;            /* texte lisible */
+  border-color: var(--border);
+}
+
+[data-theme="light"] .langBtn.active {
+  background: var(--primary-soft); /* fond bleu clair */
+  color: var(--primary);           /* TEXTE BLEU FONCÉ → lisible */
+  font-weight: 900;
+}
+/* ===== FIX NUMÉROS TÉLÉPHONE EN RTL ===== */
+.rtl .contactItem,
+.rtl .contactItem * {
+  direction: ltr !important;
+  unicode-bidi: isolate;
+  text-align: left;
+}
+
+</style>
+        <link href="../../Documents/Pinegrow%20Projects/Tailwind-CSS-20260203-211032/tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <!-- ===== BANDE LOGOS INSTITUTIONNELS ===== -->
+        <div class="institutional-logos">
+            <img src="img/ARS.png" alt="Agence Régionale de Santé Île-de-France">
+            <img src="img/AM.png" alt="Assurance Maladie">
+            <img src="img/CHMELUN.png" alt="Groupe Hospitalier de Melun">
+            <img src="img/EMV.png" alt="Équipe Mobile de Vaccination">
+        </div>
+        <!-- ===== FIN BANDE LOGOS ===== -->
+        <div class="layout">
+            <aside class="sidebar" id="sidebar">
+                <div class="brand">
+                    <div class="brandMark">V</div>
+                    <div>
+                        <div class="brandName">Vaccination Collège</div>
+                        <div style="color:var(--muted);font-size:12px;margin-top:2px">HPV • Méningite ACWY • Rappels</div>
+                    </div>
+                </div>
+                <div class="navTitle">Sections</div>
+                <div class="navList" id="navList"></div>
+                <div class="footNote" id="sideFooter">
+                    Astuce : utilisez la recherche pour trouver rapidement une réponse.
+</div>
+            </aside>
+            <main class="main">
+                <div class="topbar container">
+                    <button class="burger" id="burgerBtn">☰ Menu</button>
+                    <div class="rightBar">
+                        <div class="search" title="Rechercher dans la FAQ">
+                            🔎 
+
+                            <input id="searchInput" placeholder="Rechercher…" type="search"/>
+                        </div>
+                        <div aria-label="Langue" class="langButtons" id="langButtons"></div>
+                        <button id="themeToggle" class="btn" title="Mode clair / sombre">🌙</button>
+                    </div>
+                </div>
+                <div class="container">
+                    <section class="hero">
+                        <div class="card heroText">
+                            <h1 id="heroTitle">Vaccination <span class="accent">collège</span><br/>Île-de-France</h1>
+                            <p class="subtitle" id="heroSubtitle">
+              Accédez aux informations essentielles, aux documents et à la FAQ. L’inscription se fait en quelques clics. </p>
+                            <div class="btnRow" id="heroBtns"></div>
+                        </div>
+                    </section>
+                </div>
+<!-- ===== RECHERCHE DATE DE VACCINATION COLLÈGE ===== -->
+<section class="container" id="scheduleSearchSection" style="margin-bottom:24px;">
+  <div class="card" style="padding:20px;">
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+
+      <!-- Consigne multilingue -->
+      <div id="scheduleHint"
+           style="flex:1;min-width:240px;color:var(--muted);font-size:14px;line-height:1.5;">
+        <!-- Texte injecté via JS selon la langue -->
+      </div>
+
+      <!-- Barre de recherche -->
+      <div class="search" style="flex:1;min-width:260px;">
+        🔎
+        <input
+          type="search"
+          id="scheduleSearchInput"
+          autocomplete="off"
+        />
+      </div>
+
+    </div>
+
+    <!-- Résultats -->
+    <div id="scheduleResults" style="margin-top:16px;display:none;"></div>
+  </div>
+</section>
+<!-- ===== FIN RECHERCHE ===== -->
+
+                <section class="card" id="stepsCard" style="margin-bottom:16px;">
+                    <div class="sectionHead">
+                        <div class="sectionTitle" id="stepsTitle"></div>
+                        <div class="sectionDesc" id="stepsSubtitle"></div>
+                    </div>
+                    <div class="sectionBody">
+                        <div class="stepsContainer" id="stepsContainer"></div>
+                    </div>
+                </section>
+                <div class="grid">
+                    <section class="card" id="introCard">
+                        <div class="sectionHead">
+                            <div class="sectionTitle" id="introTitle">Message &amp; ressources</div>
+                            <div class="sectionDesc" id="introDesc">Documents officiels, formulaires et vidéos.</div>
+                        </div>
+                        <div class="sectionBody" id="introBody"></div>
+                    </section>
+                    <section class="card" id="faqCard">
+                        <div class="sectionHead">
+                            <div class="faqMeta">
+                                <div>
+                                    <div class="faqTitle" id="faqTitle">FAQ</div>
+                                    <div class="faqCount" id="faqCount"></div>
+                                </div>
+                                <div class="tagRow" id="activeFilters"></div>
+                            </div>
+                        </div>
+                        <div class="sectionBody">
+                            <div class="accordion" id="faqList"></div>
+                        </div>
+                    </section>
+                    <section class="card" id="contactCard" style="margin-top:16px;">
+                        <div class="sectionHead">
+                            <div class="sectionTitle" id="contactTitle">Nous contacter</div>
+                            <div class="sectionDesc" id="contactDesc">Adresse, téléphone et email.</div>
+                        </div>
+                        <div class="sectionBody contactWide">
+                            <div class="contactGrid">
+                                <!-- Adresse -->
+                                <a class="contactItem" href="https://maps.app.goo.gl/zGLgVufgVPTTqRAg8" target="_blank" rel="noopener" title="Ouvrir dans Google Maps"> <span class="contactIcon">📍</span> <span class="contactText">
+        8 Rue de Vaux<br/>
+        77000 Melun </span> </a>
+                                <!-- Téléphone 1 -->
+                                <a class="contactItem" href="tel:0181742850"> <span class="contactIcon">☎️</span> <span class="contactText">01 81 74 28 50</span> </a>
+                                <!-- Téléphone 2 -->
+                                <a class="contactItem" href="tel:0181743247"> <span class="contactIcon">☎️</span> <span class="contactText">01 81 74 32 47</span> </a>
+                                <!-- Email -->
+                                <a class="contactItem" href="mailto:vaccin-hpv@ghsif.fr"> <span class="contactIcon">✉️</span> <span class="contactText">vaccin-hpv@ghsif.fr</span> </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+        <script>
+  const FAQ_URL = './faq.json';
+  const INTRO_URL = './intro_resources.json';
+
+  const els = {
+    sidebar: document.getElementById('sidebar'),
+    burgerBtn: document.getElementById('burgerBtn'),
+    navList: document.getElementById('navList'),
+    langButtons: document.getElementById('langButtons'),
+    searchInput: document.getElementById('searchInput'),
+    heroBtns: document.getElementById('heroBtns'),
+    introBody: document.getElementById('introBody'),
+    faqTitle: document.getElementById('faqTitle'),
+    faqCount: document.getElementById('faqCount'),
+    faqList: document.getElementById('faqList'),
+    activeFilters: document.getElementById('activeFilters'),
+    heroKicker: document.getElementById('heroKicker'),
+    heroTitle: document.getElementById('heroTitle'),
+    heroSubtitle: document.getElementById('heroSubtitle'),
+    introTitle: document.getElementById('introTitle'),
+    introDesc: document.getElementById('introDesc'),
+    contactTitle: document.getElementById('contactTitle'),
+    contactDesc: document.getElementById('contactDesc'),
+  };
+
+  let faqData = null;
+  let introData = null;
+  let lang = 'fr';
+  let activeSection = 'all';
+
+  const safeText = (v) => (v ?? '').toString();
+
+  const normPath = (p) => {
+    if(!p) return p;
+    // On GitHub Pages (project pages), absolute paths like /img/... break.
+    // So we normalize to relative paths.
+    return (typeof p === 'string' && p.startsWith('/')) ? p.slice(1) : p;
+  };
+
+  const t = (obj, fallback='') => {
+    if(!obj) return fallback;
+    return obj[lang] || obj.fr || obj.en || Object.values(obj)[0] || fallback;
+  };
+
+  // Static UI texts that are not stored in JSON
+  const UI_TEXT = {
+    heroKicker: {
+      fr: "Informations & inscription",
+      en: "Information & registration",
+      ar: "معلومات والتسجيل",
+      tr: "Bilgi ve kayıt",
+      ps: "معلومات او ثبت نام",
+      ku: "زانیاری و تۆمارکردن",
+      ro: "Informații și înscriere",
+      ka: "ინფორმაცია და რეგისტრაცია"
+    },
+    heroTitleHtml: {
+      fr: "Vaccination <span class=\"accent\">collège</span><br/>Île-de-France",
+      en: "School <span class=\"accent\">vaccination</span><br/>Île-de-France",
+      ar: "التلقيح <span class=\"accent\">في الإعدادية</span><br/>Île-de-France",
+      tr: "Okul <span class=\"accent\">aşılaması</span><br/>Île-de-France",
+      ps: "د ښوونځي <span class=\"accent\">واکسین</span><br/>Île-de-France",
+      ku: "ڤاکسینی <span class=\"accent\">قوتابخانە</span><br/>Île-de-France",
+      ro: "Vaccinare <span class=\"accent\">la colegiu</span><br/>Île-de-France",
+      ka: "სკოლის <span class=\"accent\">ვაქცინაცია</span><br/>Île-de-France"
+    },
+    heroSubtitle: {
+  fr: "Une information claire et fiable pour accompagner les familles dans la vaccination au collège. Découvrez les documents de la campagne régionale, les réponses aux questions fréquentes et les modalités d’inscription.",
+  en: "Clear and reliable information to support families with school vaccination. Access documents from the regional campaign, answers to common questions and registration details.",
+  ar: "معلومات واضحة وموثوقة لمرافقة العائلات في التلقيح المدرسي. اطّلع على وثائق الحملة الإقليمية، والإجابات عن الأسئلة الشائعة، وطريقة التسجيل.",
+  tr: "Okul aşılamasında ailelere yönelik açık ve güvenilir bilgiler. Bölgesel kampanya belgelerine, sık sorulan sorulara ve kayıt bilgilerine ulaşın.",
+  ps: "په ښوونځي کې د واکسین په اړه د کورنیو لپاره روښانه او باوري معلومات. د سیمه‌ییز کمپاین اسناد، عامو پوښتنو ځوابونه او د نوم‌لیکنې څرنګوالی وګورئ.",
+  ku: "زانیاریی ڕوون و باوەڕپێکراو بۆ هاوکاریی خێزانەکان لە ڤاکسینی قوتابخانە. دەستگەیشتن بە بەڵگەنامەکانی کمپەینی هەرێمی، پرسیارە باوەکان و زانیاریی تۆمارکردن.",
+  ro: "Informații clare și de încredere pentru a sprijini familiile în vaccinarea școlară. Accesați documentele campaniei regionale, răspunsurile la întrebările frecvente și detaliile de înscriere.",
+  ka: "მკაფიო და სანდო ინფორმაცია ოჯახების მხარდასაჭერად სკოლის ვაქცინაციაში. გაეცანით რეგიონული კამპანიის დოკუმენტებს, ხშირად დასმულ კითხვებს და რეგისტრაციის პირობებს."
+},
+introTitle: {
+  fr: "Équipe Mobile de Vaccination – Sud Seine-et-Marne",
+  en: "Mobile Vaccination Team – Southern Seine-et-Marne",
+  ar: "الفريق المتنقل للتلقيح – جنوب سين-إي-مارن",
+  tr: "Mobil Aşılama Ekibi – Güney Seine-et-Marne",
+  ps: "د واکسین ګرځنده ټیم – جنوبي سین-اې-مارن",
+  ku: "Tîma Vakisînasyona Gerok – Başûrê Seine-et-Marne",
+  ro: "Echipa Mobilă de Vaccinare – Sud Seine-et-Marne",
+  ka: "მობილური ვაქცინაციის გუნდი – სამხრეთი სენ-ე-მარნი"
+},
+    "introDesc": {
+  "fr": "Unité de santé publique du Groupe Hospitalier de Melun, chargée de l’organisation et de la coordination de la vaccination en milieu scolaire (collèges).",
+  "en": "Public health unit of the Melun Hospital Group, responsible for organizing and coordinating school-based vaccination in middle schools.",
+  "ar": "وحدة للصحة العامة تابعة لمجموعة مستشفيات ميلون، مسؤولة عن تنظيم وتنسيق التلقيح في الوسط المدرسي (الإعدادي).",
+  "tr": "Melun Hastane Grubu’na bağlı bir halk sağlığı birimi olup ortaokullarda yürütülen aşılamanın organizasyonu ve koordinasyonundan sorumludur.",
+  "ps": "د مېلون د روغتون ډلې د عامې روغتیا واحد، چې په منځنیو ښوونځیو کې د واکسین کولو د تنظیم او همغږۍ مسؤلیت لري.",
+  "ku": "Yekîneya tenduristiya giştî ya Koma Nexweşxaneya Melunê, ku berpirsiyar e ji bo rêxistin û hevrêziya vakîsîna li dibistanên navîn.",
+  "ro": "Unitate de sănătate publică a Grupului Spitalicesc din Melun, responsabilă de organizarea și coordonarea vaccinării în mediul școlar (colegii).",
+  "ka": "მელუნის ჰოსპიტალური ჯგუფის საზოგადოებრივი ჯანმრთელობის ერთეული, რომელიც პასუხისმგებელია კოლეჯებში ვაქცინაციის ორგანიზებასა და კოორდინაციაზე."
+},
+    contactTitle: {
+      fr: "Nous contacter",
+      en: "Contact us",
+      ar: "اتصل بنا",
+      tr: "Bize ulaşın",
+      ps: "موږ سره اړیکه",
+      ku: "پەیوەندی پێوە بکە",
+      ro: "Contact",
+      ka: "დაგვიკავშირდით"
+    },
+    contactDesc: {
+      fr: "Adresse, téléphone et email.",
+      en: "Address, phone and email.",
+      ar: "العنوان والهاتف والبريد الإلكتروني.",
+      tr: "Adres, telefon ve e-posta.",
+      ps: "پته، ټیلیفون او برېښنالیک.",
+      ku: "ناونیشان، تەلەفۆن و ئیمەیڵ.",
+      ro: "Adresă, telefon și e-mail.",
+      ka: "მისამართი, ტელეფონი და ელფოსტა."
+    },
+    searchTitle: {
+      fr: "Rechercher dans la FAQ",
+      en: "Search the FAQ",
+      ar: "البحث في الأسئلة الشائعة",
+      tr: "SSS'de ara",
+      ps: "په FAQ کې لټون",
+      ku: "گەڕان لە FAQ",
+      ro: "Caută în FAQ",
+      ka: "ძიება FAQ-ში"
+    },
+    searchPlaceholder: {
+      fr: "Rechercher…",
+      en: "Search…",
+      ar: "ابحث…",
+      tr: "Ara…",
+      ps: "ولټوئ…",
+      ku: "بگەڕێ…",
+      ro: "Caută…",
+      ka: "ძიება…"
+    }
+  };
+
+  const applyStaticTexts = () => {
+    if(els.heroKicker) els.heroKicker.textContent = t(UI_TEXT.heroKicker, els.heroKicker.textContent || '');
+    if(els.heroTitle)  els.heroTitle.innerHTML   = t(UI_TEXT.heroTitleHtml, els.heroTitle.innerHTML || '');
+    if(els.heroSubtitle) els.heroSubtitle.textContent = t(UI_TEXT.heroSubtitle, els.heroSubtitle.textContent || '');
+    if(els.introTitle) els.introTitle.textContent = t(UI_TEXT.introTitle, els.introTitle.textContent || '');
+    if(els.introDesc)  els.introDesc.textContent  = t(UI_TEXT.introDesc, els.introDesc.textContent || '');
+    if(els.contactTitle) els.contactTitle.textContent = t(UI_TEXT.contactTitle, els.contactTitle.textContent || '');
+    if(els.contactDesc)  els.contactDesc.textContent  = t(UI_TEXT.contactDesc, els.contactDesc.textContent || '');
+
+    // Search UI
+    const searchWrap = document.querySelector('.search');
+    if(searchWrap) searchWrap.title = t(UI_TEXT.searchTitle, searchWrap.title || '');
+    if(els.searchInput){
+      els.searchInput.placeholder = t(UI_TEXT.searchPlaceholder, els.searchInput.placeholder || '');
+    }
+  };
+
+
+ const makeBtn = (label, href, cls='btn', key=null) => {
+  const a = document.createElement('a');
+  a.className = cls;
+  a.href = href;
+
+  if (key) a.dataset.key = key;   // ✅ CLÉ TECHNIQUE STABLE
+
+  const isLocalPdf = (typeof href === 'string')
+    && (/\.pdf(\?|#|$)/i.test(href))
+    && !/^https?:\/\//i.test(href);
+
+  const isMail = typeof href === 'string' && href.startsWith('mailto:');
+
+if (isMail) {
+  a.target = '_self';          // ✅ indispensable
+} 
+else if (isLocalPdf) {
+  if (key === 'calendar_full') {
+    a.dataset.downloadName = 'Les vaccins à tous les âges.pdf';
+  }
+  a.target = '_self';
+}
+
+else {
+  a.target = '_blank';
+  a.rel = 'noopener';
+}
+
+
+  a.textContent = label;
+  return a;
+};
+
+
+  function buildLangButtons(){
+    if(!els.langButtons) return;
+    els.langButtons.innerHTML = '';
+    const langs = (faqData?.meta?.languages) || ['fr'];
+    const labels = faqData?.meta?.lang_labels || {};
+    const flags = { fr:'🇫🇷', en:'🇬🇧', ar:'🇸🇦', tr:'🇹🇷', ps:'🇦🇫', ku:'🇮🇶', ka:'🇬🇪', ro:'🇷🇴' };
+    langs.forEach(l => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'langBtn' + (l===lang ? ' active' : '');
+      b.dataset.lang = l;
+      b.innerHTML = `<span aria-hidden="true">${flags[l]||'🌐'}</span><span>${labels[l] || l}</span>`;
+      b.addEventListener('click', () => setLanguage(l));
+      els.langButtons.appendChild(b);
+    });
+  }
+
+  function setLanguage(newLang){
+  lang = newLang;
+  applyDirection();
+  applyStaticTexts();
+  buildSidebar();
+  renderHero();
+  renderIntro();
+  renderSteps();
+  renderFAQ();
+  buildLangButtons();
+
+  // ✅ RELANCE DU CYCLE
+  requestAnimationFrame(() => {
+    setTimeout(startStepPulse, 800);
+  });
+}
+
+
+  function buildSidebar(){
+    const sections = faqData?.sections || [];
+    const items = faqData?.items || [];
+    const counts = {};
+    items.forEach(it => { counts[it.section] = (counts[it.section]||0)+1; });
+
+    const allLabel = (lang === 'fr') ? 'Tout' :
+                     (lang === 'en') ? 'All' :
+                     (lang === 'ar') ? 'الكل' :
+                     (lang === 'tr') ? 'Tümü' :
+                     (lang === 'ps') ? 'ټول' :
+                     (lang === 'ku') ? 'Hemû' :
+                     (lang === 'ro') ? 'Toate' :
+                     (lang === 'ka') ? 'ყველა' : 'All';
+
+
+
+    els.navList.innerHTML = '';
+    const all = document.createElement('div');
+    all.className = 'navItem' + (activeSection==='all'?' active':'');
+    all.onclick = () => { activeSection='all'; renderFAQ(); buildSidebar(); };
+    all.innerHTML = `<span>${allLabel}</span><span class="chip">${items.length}</span>`;
+    els.navList.appendChild(all);
+
+    sections.forEach(sec => {
+      const id = sec.key || sec.id;
+      const label = t(sec.title, id);
+      const row = document.createElement('div');
+      row.className = 'navItem' + (activeSection===id?' active':'');
+      row.onclick = () => { activeSection=id; renderFAQ(); buildSidebar(); };
+      row.innerHTML = `<span>${label}</span><span class="chip">${counts[id]||0}</span>`;
+      els.navList.appendChild(row);
+    });
+  }
+
+  function renderHero(){
+    els.heroBtns.innerHTML = '';
+
+    // Keep: official IDF website
+    const idfUrl = introData?.official_idf?.site?.url;
+    const idfLabel = t(introData?.official_idf?.site?.label, 'Site officiel – Vaccination Collège Île-de-France');
+    if(idfUrl){
+      els.heroBtns.appendChild(makeBtn(idfLabel, idfUrl, 'btn'));
+    }
+
+    // Add: 3 key videos next to the official site
+    const vids = (introData?.resources?.videos || []).slice(0,3);
+    vids.forEach(v => {
+      /* ✅ FIX VIDEO LABEL: title first, then label */
+      const label = t(v.title, '') || t(v.label, 'Vidéo');
+      if(v?.url) els.heroBtns.appendChild(makeBtn(label, v.url, 'btn'));
+    });
+  }
+
+
+
+  function renderIntro(){
+    const root = els.introBody;
+    root.innerHTML = '';
+
+    // Logo if available
+    const logoFile = null;
+
+    const logoAlt = t(introData?.branding?.service_logo?.alt || introData?.branding?.logo?.alt, 'Logo');
+    if(logoFile){
+      const img = document.createElement('img');
+      img.src = logoFile;
+      img.alt = logoAlt;
+      img.className = 'logoImg';
+      root.appendChild(img);
+    }
+
+    // Intro text
+    const introBlock = introData?.intro;
+    if(introBlock){
+      const title = document.createElement('div');
+      title.style.fontWeight = '900';
+      title.style.fontSize = '16px';
+      title.textContent = t(introBlock.title, 'Introduction');
+      root.appendChild(title);
+
+      const body = document.createElement('div');
+      body.className = 'note';
+      body.style.fontSize = '13px';
+      body.style.color = 'var(--text)';
+      body.textContent = t(introBlock.body, '') || t(introBlock.text, '');
+      root.appendChild(body);
+
+      const sig = (typeof introBlock.signature === 'string') ? introBlock.signature : t(introBlock.signature, '');
+      if(sig){
+        const s = document.createElement('div');
+        s.className = 'note';
+        s.textContent = sig;
+        root.appendChild(s);
+      }
+
+    }
+
+    const group = document.createElement('div');
+    group.className = 'resourceGroup';
+    root.appendChild(group);
+
+    const addBtn = (label, href) => group.appendChild(makeBtn(label, href, 'btn'));
+
+    // Registration button (HPV + Méningite ACWY uniquement)
+    const regUrl = introData?.registration?.url || introData?.registration?.online?.url;
+    const regLabel = t(introData?.registration?.label || introData?.registration?.online?.label, 'Inscription en ligne (HPV + Méningite ACWY uniquement)');
+    if(regUrl) {
+  group.appendChild(
+    makeBtn(regLabel, regUrl, 'btn', 'registration_hpv')
+  );
+}
+
+    // Forms
+    (introData?.resources?.forms || []).forEach(f => {
+  group.appendChild(
+    makeBtn(
+      t(f.label, 'Formulaire'),
+      f.url,
+      'btn',
+      f.type === 'hpv' ? 'form_hpv' : 'form_other'
+    )
+  );
+});
+
+    // Existing videos
+(introData?.resources?.videos || []).forEach(v => {
+  group.appendChild(
+    makeBtn(
+      t(v.title) || t(v.label),
+      v.url,
+      'btn',
+      'video_info'
+    )
+  );
+});
+
+    // Existing email
+    if(introData?.contact?.email){
+  group.appendChild(
+    makeBtn(
+      introData.contact.email,
+      `mailto:${introData.contact.email}`,
+      'btn',
+      'contact_email'
+    )
+  );
+}
+
+
+    // Additions (chef) — optional
+// Ressources officielles HPV – adolescents (toutes langues)
+if (introData?.hpv_flyer_multilang?.url) {
+  group.appendChild(
+    makeBtn(
+      t(introData.hpv_flyer_multilang.label, 'Ressources officielles HPV'),
+      introData.hpv_flyer_multilang.url,
+      'btn',
+      'hpv_resources'
+    )
+  );
+}
+    if(introData?.official_idf?.flyer_pdf?.file){
+  group.appendChild(
+    makeBtn(
+      t(introData.official_idf.flyer_pdf.label, 'Flyer officiel (PDF)'),
+      normPath(introData.official_idf.flyer_pdf.file),
+      'btn',
+      'flyer_officiel'
+    )
+  );
+}
+
+
+    // Meningite documents
+    if(introData?.meningite_documents){
+      const mt = document.createElement('div');
+      mt.style.marginTop = '14px';
+      mt.style.fontWeight = '900';
+      mt.textContent = t(introData.meningite_documents.label, 'Méningite – documents');
+      root.appendChild(mt);
+
+      const mgroup = document.createElement('div');
+      mgroup.className = 'resourceGroup';
+      mgroup.style.marginTop = '10px';
+      root.appendChild(mgroup);
+
+      (introData.meningite_documents.items || []).forEach(it => {
+  mgroup.appendChild(
+    makeBtn(
+      t(it.label, 'Document'),
+      normPath(it.file),
+      'btn',
+      'meningite_doc'
+    )
+  );
+});
+
+// Calendrier simplifié des vaccinations – 2025
+if (introData?.calendar_simple?.file) {
+  group.appendChild(
+    makeBtn(
+      t(introData.calendar_simple.label, 'Calendrier simplifié des vaccinations – 2025'),
+      normPath(introData.calendar_simple.file),
+      'btn',
+      'calendar_simple'
+    )
+  );
+}
+// Calendrier vaccinal complet – 2025
+if (introData?.calendar_full?.file) {
+  group.appendChild(
+    makeBtn(
+      t(
+        introData.calendar_full.label,
+        'Les vaccins à tous les âges – Calendrier vaccinal 2025'
+      ),
+      normPath(introData.calendar_full.file),
+      'btn',
+      'calendar_full'
+    )
+  );
+}
+
+
+      const note = t(introData.meningite_documents.note, '');
+      if(note){
+        const n = document.createElement('div');
+        n.className = 'note';
+        n.textContent = note;
+        root.appendChild(n);
+      }
+    }
+  }
+const imgByStep = {
+  1: 'img/step1.png',
+  2: 'img/step2.png',
+  3: 'img/step3.png'
+};
+function renderSteps(){
+  const steps = introData?.intro?.vaccination_steps;
+  if(!steps) return;
+
+  const titleEl = document.getElementById('stepsTitle');
+  const subtitleEl = document.getElementById('stepsSubtitle');
+  const container = document.getElementById('stepsContainer');
+
+  if(!titleEl || !subtitleEl || !container) return;
+
+  titleEl.textContent = t(steps.title, '');
+  subtitleEl.textContent = t(steps.subtitle, '');
+  container.innerHTML = '';
+
+  (steps.steps || []).forEach(step => {
+  const div = document.createElement('div');
+  div.className = 'stepItem';
+  div.style.cursor = 'pointer';
+
+div.innerHTML = `
+  <img
+    src="${imgByStep[step.number] || ''}"
+    class="stepIllustration"
+    aria-hidden="true"
+  />
+  <div class="stepNumber">${step.number}</div>
+  <div>
+    <div class="stepTitle">${t(step.title, '')}</div>
+    <div class="stepText">${t(step.text, '')}</div>
+  </div>
+`;
+
+  const actions = document.createElement('div');
+actions.className = 'stepActions';
+actions.dataset.step = step.number;
+div.appendChild(actions);
+
+div.addEventListener('click', (e) => {
+  // ⛔ ne jamais intercepter les clics sur les liens
+  if (e.target.closest('a')) return;
+
+  const zone = actions;
+
+  // Toggle simple
+  if (zone.classList.contains('active')) {
+    zone.classList.remove('active');
+    zone.innerHTML = '';
+    div.setAttribute('aria-expanded', 'false');
+    return;
+  }
+
+  // Fermer les autres étapes ouvertes
+  document.querySelectorAll('.stepActions.active').forEach(z => {
+    z.classList.remove('active');
+    z.innerHTML = '';
+    z.parentElement?.setAttribute('aria-expanded', 'false');
+  });
+
+  zone.classList.add('active');
+  div.setAttribute('aria-expanded', 'true');
+
+  const group = document.createElement('div');
+  group.className = 'resourceGroup';
+
+  const allBtns = document.querySelectorAll('#introBody .btn');
+
+  allBtns.forEach(btn => {
+    const key = btn.dataset.key;
+    const clone = btn.cloneNode(true);
+
+    // ÉTAPE 1 — S’informer
+    if (step.number === 1 && ['video_info','flyer_officiel','hpv_resources'].includes(key)) {
+      group.appendChild(clone);
+    }
+
+    // ÉTAPE 2 — Consentement
+    if (step.number === 2 && ['registration_hpv','form_hpv','form_other'].includes(key)) {
+      group.appendChild(clone);
+    }
+
+    // ÉTAPE 3 — Vaccination
+    if (step.number === 3 && ['contact_email','meningite_doc','calendar_simple','calendar_full'].includes(key)) {
+      group.appendChild(clone);
+    }
+  });
+
+  zone.appendChild(group);
+});
+
+  container.appendChild(div);
+});
+
+}
+
+  function renderFAQ(){
+    const q = (els.searchInput.value || '').trim().toLowerCase();
+    const items = (faqData?.items || []).filter(it => {
+      if(activeSection !== 'all' && it.section !== activeSection) return false;
+      const question = safeText(t(it.q));
+      const answer = safeText(t(it.a));
+      const hay = (question + ' ' + answer).toLowerCase();
+      if(!q) return true;
+      return hay.includes(q);
+    });
+
+    els.faqTitle.textContent = t(faqData?.meta?.title, 'FAQ');
+    const total = (faqData?.items || []).filter(it => activeSection==='all' ? true : it.section===activeSection).length;
+    els.faqCount.textContent = `${items.length} / ${total}`;
+
+    els.faqList.innerHTML = '';
+    items.forEach(it => {
+      const d = document.createElement('details');
+      const s = document.createElement('summary');
+      s.textContent = t(it.q, 'Question');
+      const right = document.createElement('span');
+      right.className = 'chip';
+      const sec = (faqData?.sections || []).find(x => (x.key || x.id) === it.section);
+      right.textContent = sec ? t(sec.title, it.section) : it.section;
+      s.appendChild(right);
+
+      const a = document.createElement('div');
+      a.className = 'ans';
+      a.textContent = t(it.a, '');
+
+      d.appendChild(s);
+      d.appendChild(a);
+
+      els.faqList.appendChild(d);
+    });
+  }
+
+  function applyDirection() {
+    const rtlLangs = ['ar','ps','ku'];
+    if (rtlLangs.includes(lang)) {
+      document.body.classList.add('rtl');
+      document.documentElement.setAttribute('dir','rtl');
+    } else {
+      document.body.classList.remove('rtl');
+      document.documentElement.setAttribute('dir','ltr');
+    }
+  }
+
+  async function init(){
+    const [faqRes, introRes] = await Promise.all([
+      fetch(FAQ_URL, {cache:'no-store'}),
+      fetch(INTRO_URL, {cache:'no-store'})
+    ]);
+    faqData = await faqRes.json();
+    introData = await introRes.json();
+
+    // initial lang = first meta language if present
+    const langs = faqData?.meta?.languages || ['fr'];
+    lang = langs.includes('fr') ? 'fr' : langs[0];
+
+    applyStaticTexts();
+    buildLangButtons();
+    buildSidebar();
+    renderHero();
+    renderIntro();
+    renderSteps();
+    requestAnimationFrame(() => {
+  setTimeout(startStepPulse, 800);
+});
+    renderFAQ();
+  }
+
+  // Events
+  els.burgerBtn.addEventListener('click', () => els.sidebar.classList.toggle('open'));
+  els.searchInput.addEventListener('input', () => renderFAQ());
+  document.addEventListener('click', (e) => {
+    if(window.innerWidth <= 980){
+      const inside = els.sidebar.contains(e.target) || els.burgerBtn.contains(e.target);
+      if(!inside) els.sidebar.classList.remove('open');
+    }
+  });
+
+  init().catch(err => {
+    console.error(err);
+    alert("Erreur de chargement des fichiers JSON. Vérifiez que faq.json et intro_resources.json sont bien à la racine du site.");
+  });
+// ===== FIX TÉLÉCHARGEMENT PDF (nom personnalisé au clic) =====
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a');
+  if (!link) return;
+
+  const name = link.dataset.downloadName;
+  if (name) {
+    link.setAttribute('download', name);
+  }
+});
+/* ===== THEME TOGGLE ===== */
+const toggle = document.getElementById('themeToggle');
+const root = document.documentElement;
+
+const savedTheme = localStorage.getItem('theme') || 'light';
+root.setAttribute('data-theme', savedTheme);
+toggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
+toggle.addEventListener('click', () => {
+  const current = root.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  toggle.textContent = next === 'dark' ? '☀️' : '🌙';
+});
+
+/* ===== PULSE GUIDÉ DES ÉTAPES (RYTHME HUMAIN) ===== */
+let pulseTimer = null;
+
+function startStepPulse() {
+  // sécurité : mobile seulement
+ // TEST UNIQUEMENT – autoriser desktop
+// if (!window.matchMedia('(max-width: 1024px)').matches) return;
+
+  // nettoyage strict
+  if (pulseTimer) {
+    clearTimeout(pulseTimer);
+    pulseTimer = null;
+  }
+
+  const steps = Array.from(document.querySelectorAll('.stepItem'));
+  if (steps.length === 0) return;
+
+  let index = 0;
+
+  function pulseNext() {
+    steps.forEach(s => s.classList.remove('pulse'));
+
+    const step = steps[index];
+    if (step) {
+      step.classList.add('pulse');
+      setTimeout(() => step.classList.remove('pulse'), 1200);
+    }
+
+    index++;
+
+    if (index >= steps.length) {
+      index = 0;
+      pulseTimer = setTimeout(pulseNext, 6000); // pause longue
+    } else {
+      pulseTimer = setTimeout(pulseNext, 1500); // rythme humain
+    }
+  }
+
+  pulseNext();
+}
+</script>
+<script>
+/* ===== RECHERCHE PLANNING VACCINATION COLLÈGES (SAFE) ===== */
+let calendarConfig = null;
+
+const SCHEDULE_URL = './schedule_sessions.json';
+let scheduleData = null;
+
+/* Utilitaires */
+const normSchedule = s =>
+  (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+const tSchedule = obj => obj?.[lang] || obj?.fr || '';
+
+const SCHEDULE_TEXT = {
+  hint: {
+    fr: "Trouvez rapidement la date de vaccination de votre collège.\nIndiquez le nom de votre commune, votre code postal ou le nom du collège.",
+    en: "Find your school’s vaccination date.\nEnter your city, postal code or school name.",
+    ar: "اعثر بسرعة على موعد التلقيح في مدرسة طفلك.\nأدخل اسم المدينة أو الرمز البريدي أو اسم المدرسة لمعرفة موعد زيارة فريق التلقيح.",
+    tr: "Okulunuzun aşı tarihini bulun.\nŞehir adı, posta kodu veya okul adını girerek aşılama tarihini öğrenin.",
+    ps: "د خپل ښوونځي د واکسین نېټه ومومئ.\nد ښار نوم، پوسټ کوډ یا د ښوونځي نوم ولیکئ.",
+    ku: "ڕێکەوتی ڤاکسینی قوتابخانەکەت بدۆزەوە.\nناوی شار، کۆدی پۆستەیی یان ناوی قوتابخانە بنووسە.",
+    ro: "Găsiți data vaccinării școlii.\nIntroduceți localitatea, codul poștal sau numele școlii.",
+    ka: "იპოვეთ თქვენი სკოლის ვაქცინაციის თარიღი.\nშეიყვანეთ ქალაქი, საფოსტო კოდი ან სკოლის სახელი."
+  },
+  placeholder: {
+    fr: "Ville, code postal ou nom du collège…",
+    en: "City, postal code or school name…",
+    ar: "المدينة أو الرمز البريدي أو اسم المدرسة…",
+    tr: "Şehir, posta kodu veya okul adı…",
+    ps: "ښار، پوسټ کوډ یا د ښوونځي نوم…",
+    ku: "شار، کۆدی پۆستەیی یان ناوی قوتابخانە…",
+    ro: "Localitate, cod poștal sau numele școlii…",
+    ka: "ქალაქი, საფოსტო კოდი ან სკოლის სახელი…"
+  },
+  addCalendar: {
+    fr: "Ajouter au calendrier",
+    en: "Add to calendar",
+    ar: "إضافة إلى التقويم",
+    tr: "Takvime ekle",
+    ps: "کالېنډر ته اضافه کړئ",
+    ku: "زیادکردن بۆ ڕۆژژمێر",
+    ro: "Adaugă în calendar",
+    ka: "კალენდარში დამატება"
+  }
+};
+
+async function initScheduleSearch() {
+  const hint = document.getElementById('scheduleHint');
+  const input = document.getElementById('scheduleSearchInput');
+  const results = document.getElementById('scheduleResults');
+
+  if (!hint || !input || !results) return;
+
+  const res = await fetch(SCHEDULE_URL, { cache: 'no-store' });
+  scheduleData = await res.json();
+calendarConfig = scheduleData.calendar_message;
+
+  applyScheduleTexts();
+
+  input.addEventListener('input', () => {
+  const q = normSchedule(input.value);
+  results.innerHTML = '';
+  results.style.display = 'none';
+  if (q.length < 2) return;
+
+  const matches = scheduleData.sessions.filter(s =>
+    normSchedule(s.city).includes(q) ||
+    normSchedule(s.postal_code).includes(q) ||
+    normSchedule(s.college_name).includes(q)
+  );
+
+  if (matches.length === 0) {
+    results.style.display = 'block';
+    results.innerHTML = `
+      <div class="card" style="padding:12px;color:var(--muted);">
+        ${lang === 'fr' ? 'Aucun résultat trouvé.' :
+          lang === 'en' ? 'No result found.' :
+          lang === 'ar' ? 'لا توجد نتائج.' :
+          lang === 'tr' ? 'Sonuç bulunamadı.' :
+          lang === 'ps' ? 'هیڅ پایله ونه موندل شوه.' :
+          lang === 'ku' ? 'هیچ ئەنجامێک نەدۆزرایەوە.' :
+          lang === 'ro' ? 'Niciun rezultat găsit.' :
+          'შედეგი ვერ მოიძებნა'}
+      </div>`;
+    return;
+  }
+
+  results.style.display = 'block';
+results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+  matches.forEach(s => {
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.style.padding = '14px';
+    div.style.marginBottom = '8px';
+    div.style.cursor = 'pointer';
+
+    const dateStr = new Date(s.date).toLocaleDateString(
+      lang === 'en' ? 'en-GB' : 'fr-FR',
+      { weekday:'long', day:'numeric', month:'long', year:'numeric' }
+    );
+
+    div.innerHTML = `
+      <strong>${s.college_name}</strong><br>
+      <span style="color:var(--muted)">${s.city} (${s.postal_code})</span><br>
+      <span>📅 ${dateStr}</span><br>
+      <button class="btn primary" style="margin-top:8px">
+        ${tSchedule(SCHEDULE_TEXT.addCalendar)}
+      </button>
+    `;
+
+    div.querySelector('button').addEventListener('click', (e) => {
+      e.stopPropagation();
+      downloadICS(s);
+    });
+
+    results.appendChild(div);
+  });
+});
+
+}
+
+function applyScheduleTexts() {
+  const hint = document.getElementById('scheduleHint');
+  const input = document.getElementById('scheduleSearchInput');
+  if (hint) hint.textContent = tSchedule(SCHEDULE_TEXT.hint);
+  if (input) input.placeholder = tSchedule(SCHEDULE_TEXT.placeholder);
+}
+
+/* Hook langue EXISTANT */
+const _setLang = window.setLanguage;
+window.setLanguage = function (l) {
+  _setLang(l);
+  applyScheduleTexts();
+};
+function downloadICS(session) {
+  if (!calendarConfig) return;
+
+  const title =
+    calendarConfig.title?.[lang] ||
+    calendarConfig.title?.fr;
+
+  const message =
+    calendarConfig.description?.[lang] ||
+    calendarConfig.description?.fr;
+
+  const date = session.date.replace(/-/g, '');
+  const endDate = new Date(session.date);
+  endDate.setDate(endDate.getDate() + 1);
+  const end = endDate.toISOString().slice(0,10).replace(/-/g,'');
+
+  const esc = s =>
+    s.replace(/\\/g,'\\\\')
+     .replace(/\n/g,'\\n')
+     .replace(/,/g,'\\,')
+     .replace(/;/g,'\\;');
+
+  const ics = `
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Vaccination Collège IDF//FR
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:${Date.now()}@vaccination-idf.fr
+SUMMARY:${esc(title)}
+DTSTART;VALUE=DATE:${date}
+DTEND;VALUE=DATE:${end}
+LOCATION:${esc(`${session.college_name} – ${session.city} (${session.postal_code})`)}
+DESCRIPTION:${esc(message)}
+BEGIN:VALARM
+TRIGGER:${calendarConfig.reminder?.offset || '-P1D'}
+ACTION:DISPLAY
+DESCRIPTION:${esc(title)}
+END:VALARM
+END:VEVENT
+END:VCALENDAR`.trim();
+
+  const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `vaccination-${session.college_name}.ics`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+document.addEventListener('DOMContentLoaded', initScheduleSearch);
+</script>
+
+    </body>
+</html>

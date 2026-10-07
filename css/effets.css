@@ -1,0 +1,165 @@
+/* =====================================================================
+   EFFETS VISUELS — étapes, FAQ en couleurs, message du médecin
+   Partagé par college/index.html et lycee/index.html.
+   Ne modifie aucun texte : seulement la présentation.
+   ===================================================================== */
+
+/* ---------- 1. ÉTAPES : trois cartes avec les illustrations du site ---------- */
+#stepsContainer.stepsContainer{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start;padding:6px 2px 4px}
+#stepsContainer.stepsContainer::before,#stepsContainer.stepsContainer::after{display:none !important}
+@media (max-width:860px){#stepsContainer.stepsContainer{grid-template-columns:1fr}}
+#stepsContainer .stepItem{--sc:#185FA5;--sb:#E6F1FB;
+  position:relative;display:flex !important;flex-direction:column;align-items:center;text-align:center;gap:10px !important;
+  padding:22px 18px 22px !important;border-radius:22px !important;border:1px solid var(--border) !important;background:var(--card) !important;
+  opacity:1 !important;filter:none !important;animation:none !important;overflow:hidden;cursor:pointer;
+  transition:transform .45s cubic-bezier(.2,.9,.25,1.3),border-color .3s ease,box-shadow .4s ease !important}
+#stepsContainer .stepItem:nth-child(2){--sc:#0F6E56;--sb:#E1F5EE}
+#stepsContainer .stepItem:nth-child(3){--sc:#534AB7;--sb:#EEEDFE}
+#stepsContainer .stepItem::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .4s ease;
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),var(--sb),transparent 60%)}
+#stepsContainer .stepItem::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--sc);transform:scaleX(0);transform-origin:left;transition:transform .6s cubic-bezier(.2,.9,.25,1)}
+#stepsContainer .stepItem > *{position:relative;z-index:1}
+#stepsContainer .stepItem:hover,#stepsContainer .stepItem[aria-expanded="true"]{transform:translateY(-8px);border-color:var(--sc) !important;box-shadow:0 26px 44px -26px var(--sc) !important;background:var(--card) !important}
+#stepsContainer .stepItem:hover::before,#stepsContainer .stepItem[aria-expanded="true"]::before{opacity:1}
+#stepsContainer .stepItem:hover::after,#stepsContainer .stepItem[aria-expanded="true"]::after{transform:scaleX(1)}
+#stepsContainer .stepIllustration{width:132px !important;height:132px !important;min-width:0 !important;max-width:none !important;object-fit:contain;
+  border-radius:50%;background:var(--sb);padding:10px;transition:transform .6s cubic-bezier(.2,.9,.25,1.4)}
+#stepsContainer .stepItem:hover .stepIllustration,#stepsContainer .stepItem[aria-expanded="true"] .stepIllustration{transform:scale(1.07) rotate(-4deg)}
+#stepsContainer .stepNumber{position:absolute !important;top:14px;left:14px;width:40px !important;height:40px !important;background:var(--sb) !important;color:var(--sc) !important;
+  font-size:17px;transition:transform .5s cubic-bezier(.2,.9,.25,1.6),background .3s ease,color .3s ease}
+#stepsContainer .stepItem:hover .stepNumber,#stepsContainer .stepItem[aria-expanded="true"] .stepNumber{background:var(--sc) !important;color:#fff !important;transform:scale(1.12) rotate(-10deg)}
+#stepsContainer .stepTextWrap{width:100%}
+#stepsContainer .stepActions{border:0 !important;background:none !important;box-shadow:none !important;padding:0 !important;margin:0 !important}
+#stepsContainer .stepTitle{font-size:17px !important;color:var(--text);margin:2px 0 6px}
+#stepsContainer .stepText{font-size:14px !important;color:var(--muted)}
+/* Menu de boutons de chaque étape : mêmes couleurs et mêmes effets que l'étape */
+#stepsContainer .stepActions .resourceGroup{flex-direction:column;align-items:stretch;gap:10px;padding-top:14px}
+#stepsContainer .stepActions .btn{position:relative;overflow:hidden;justify-content:center;text-align:center;white-space:normal;
+  background:var(--sb) !important;color:var(--sc) !important;border:1px solid var(--sc) !important;border-radius:999px;padding:11px 16px;
+  transition:transform .4s cubic-bezier(.2,.9,.25,1.4),background .3s ease,color .3s ease,box-shadow .35s ease !important;
+  animation:fxBtnIn .5s cubic-bezier(.2,.9,.25,1.2) both}
+#stepsContainer .stepActions .btn:nth-child(2){animation-delay:.08s}
+#stepsContainer .stepActions .btn:nth-child(3){animation-delay:.16s}
+#stepsContainer .stepActions .btn:nth-child(4){animation-delay:.24s}
+#stepsContainer .stepActions .btn:hover{background:var(--sc) !important;color:#fff !important;transform:translateY(-3px) scale(1.02);box-shadow:0 14px 26px -16px var(--sc) !important}
+@keyframes fxBtnIn{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
+
+/* ---------- 2. FAQ : une couleur et une icône par rubrique ---------- */
+.acc{--qc:#185FA5;--qb:#E6F1FB}
+.acc[data-section="hpv"]{--qc:#993556;--qb:#FBEAF0}
+.acc[data-section="meningococcal"]{--qc:#993C1D;--qb:#FAECE7}
+.acc[data-section="safety"]{--qc:#0F6E56;--qb:#E1F5EE}
+.acc[data-section="school_process"]{--qc:#854F0B;--qb:#FAEEDA}
+.acc[data-section="consent"]{--qc:#534AB7;--qb:#EEEDFE}
+.acc[data-section="other"]{--qc:#5F5E5A;--qb:#F1EFE8}
+.acc[data-section="key_messages"]{--qc:#185FA5;--qb:#E6F1FB}
+.faqSectionHead[data-section]{display:flex;align-items:center;gap:8px;color:var(--qc) !important}
+.faqSectionHead[data-section]::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--qc)}
+#faqList .acc{position:relative;background:var(--card) !important;border:1px solid var(--border) !important;border-radius:18px !important;
+  transition:transform .35s cubic-bezier(.2,.9,.25,1.3),border-color .3s ease,box-shadow .35s ease !important}
+#faqList .acc:hover{transform:translateX(5px);border-color:var(--qc) !important}
+#faqList .acc.ouverte{border-color:var(--qc) !important;box-shadow:0 0 0 1px var(--qc) inset,0 18px 36px -26px var(--qc) !important}
+#faqList .acc button > span:not(.fxIco):not(.signe){flex:1 1 auto;min-width:0}
+#faqList .acc .corps .faqAns{margin:0 18px 0 64px !important;padding:0;transition:padding .45s ease,opacity .35s ease;opacity:0}
+#faqList .acc.ouverte .corps .faqAns{padding-bottom:16px;opacity:1}
+@media (max-width:560px){#faqList .acc .corps .faqAns{margin:0 16px 0 16px !important}}
+#faqList .acc .fxIco{flex:0 0 34px;width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:var(--qb);color:var(--qc);
+  transition:transform .45s cubic-bezier(.2,.9,.25,1.6),background .3s ease,color .3s ease}
+#faqList .acc .fxIco svg{width:18px;height:18px}
+#faqList .acc:hover .fxIco,#faqList .acc.ouverte .fxIco{background:var(--qc);color:#fff;transform:rotate(-10deg) scale(1.06)}
+#faqList .acc .signe{background:var(--qb) !important;color:var(--qc) !important}
+#faqList .acc.ouverte .signe{background:var(--qc) !important;color:#fff !important}
+#faqList .acc .fxRip{position:absolute;border-radius:50%;background:var(--qb);transform:scale(0);opacity:.9;pointer-events:none;z-index:0;animation:fxRip .7s ease-out forwards}
+#faqList .acc h3,#faqList .acc .corps{position:relative;z-index:1}
+@keyframes fxRip{to{transform:scale(1);opacity:0}}
+
+/* ---------- 3. MESSAGE DU MÉDECIN : apparition en avance sur la lecture ---------- */
+#introBody .fadeWord{color:var(--text) !important;font-weight:inherit !important;display:inline-block;white-space:pre-wrap;
+  transition:opacity .45s ease,transform .55s cubic-bezier(.2,.9,.25,1.3),filter .45s ease,color .6s ease}
+#introBody .fadeWord.fxH{opacity:0;transform:translateY(16px) rotate(-5deg);filter:blur(6px)}
+#introBody .fadeWord.counterNum{font-weight:800 !important}
+#introBody::before{display:none !important}
+
+@media (prefers-reduced-motion: reduce){
+  #stepsContainer .stepItem,#stepsContainer .stepIllustration,#stepsContainer .stepNumber,#faqList .acc,#faqList .acc .fxIco,#introBody .fadeWord{transition:none !important}
+  #introBody .fadeWord.fxH{opacity:1;transform:none;filter:none}
+  #stepsContainer .stepActions .btn{animation:none}
+}
+
+/* ---------- 4. APPARITION DES SECTIONS : plus rapide ---------- */
+.reveal{transform:translateY(10px) !important;transition:opacity .3s ease,transform .35s cubic-bezier(.2,.8,.2,1) !important;transition-delay:0s !important}
+.reveal.visible{transform:none !important}
+
+/* ---------- 5. VIDÉOS : couleurs, zoom léger, effets au survol et au toucher ---------- */
+#videoGrid .videoCard{--vc:#185FA5;--vb:#E6F1FB;position:relative;padding:10px 10px 14px;border-radius:20px;border:1px solid var(--border);background:var(--card);
+  transition:transform .45s cubic-bezier(.2,.9,.25,1.3),border-color .3s ease,box-shadow .4s ease}
+#videoGrid .videoCard:nth-child(5n+2){--vc:#993556;--vb:#FBEAF0}
+#videoGrid .videoCard:nth-child(5n+3){--vc:#993C1D;--vb:#FAECE7}
+#videoGrid .videoCard:nth-child(5n+4){--vc:#0F6E56;--vb:#E1F5EE}
+#videoGrid .videoCard:nth-child(5n+5){--vc:#534AB7;--vb:#EEEDFE}
+#videoGrid .videoCard::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .4s ease;
+  background:radial-gradient(320px circle at var(--mx,50%) var(--my,30%),var(--vb),transparent 65%)}
+#videoGrid .videoCard > *{position:relative}
+#videoGrid .videoCard:hover,#videoGrid .videoCard.fxTouch{transform:translateY(-8px);border-color:var(--vc);box-shadow:0 26px 44px -26px var(--vc)}
+#videoGrid .videoCard:hover::before,#videoGrid .videoCard.fxTouch::before{opacity:1}
+#videoGrid .videoFrame{border-radius:14px;box-shadow:none;outline:2px solid transparent;outline-offset:2px;transition:outline-color .3s ease}
+#videoGrid .videoCard:hover .videoFrame,#videoGrid .videoCard.fxTouch .videoFrame{outline-color:var(--vc)}
+#videoGrid .videoThumb{transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+#videoGrid .videoCard:hover .videoThumb,#videoGrid .videoCard.fxTouch .videoThumb{transform:scale(1.08)}
+#videoGrid .videoThumb::after{content:"";position:absolute;inset:0;background:var(--vc);opacity:0;mix-blend-mode:multiply;transition:opacity .4s ease;pointer-events:none}
+#videoGrid .videoCard:hover .videoThumb::after,#videoGrid .videoCard.fxTouch .videoThumb::after{opacity:.22}
+#videoGrid .playGlass{transition:transform .5s cubic-bezier(.2,.9,.25,1.6),background .3s ease,border-color .3s ease !important}
+#videoGrid .videoCard:hover .playGlass,#videoGrid .videoCard.fxTouch .playGlass{background:var(--vc) !important;border-color:#fff !important;transform:scale(1.18) !important}
+#videoGrid .playGlass::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid #fff;opacity:0;pointer-events:none}
+#videoGrid .videoCard:hover .playGlass::after,#videoGrid .videoCard.fxTouch .playGlass::after{animation:fxRing 1.4s ease-out infinite}
+@keyframes fxRing{0%{opacity:.8;transform:scale(.85)}100%{opacity:0;transform:scale(1.55)}}
+#videoGrid .videoTitle{transition:color .3s ease}
+#videoGrid .videoCard:hover .videoTitle > div:first-child,#videoGrid .videoCard.fxTouch .videoTitle > div:first-child{color:var(--vc)}
+#videoGrid .videoPresenter{color:var(--vc) !important}
+#videoGrid .videoLink{color:var(--vc) !important;background:var(--vb);border:1px solid var(--vc);border-radius:999px;padding:5px 12px;margin-top:8px;
+  transition:transform .4s cubic-bezier(.2,.9,.25,1.4),background .3s ease,color .3s ease,box-shadow .35s ease}
+#videoGrid .videoLink:hover{background:var(--vc);color:#fff !important;transform:translateY(-2px) scale(1.04);box-shadow:0 12px 22px -14px var(--vc)}
+@media (prefers-reduced-motion: reduce){#videoGrid .videoCard,#videoGrid .videoThumb,#videoGrid .playGlass{transition:none !important}#videoGrid .playGlass::after{animation:none !important}}
+
+/* ---------- 6. VIDÉOS : grande fenêtre de lecture et badge « Déjà vue » ---------- */
+#videoGrid .fxBadge{position:absolute;z-index:3;top:8px;left:8px;display:inline-flex;align-items:center;gap:4px;padding:4px 9px;border-radius:999px;
+  font-size:11px;font-weight:800;background:rgba(255,255,255,.92);color:var(--vc);box-shadow:0 4px 12px rgba(0,0,0,.18);pointer-events:none;
+  animation:fxPopIn .45s cubic-bezier(.2,.9,.25,1.6)}
+#videoGrid .fxBadge svg{width:12px;height:12px}
+@keyframes fxPopIn{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+.fxLb{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;padding:20px;
+  background:rgba(10,14,25,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;transition:opacity .3s ease}
+.fxLb.on{opacity:1}
+.fxLbBox{position:relative;width:min(960px,100%);border-radius:22px;overflow:hidden;background:#000;
+  box-shadow:0 0 0 3px var(--vc,#2563eb),0 40px 90px -30px rgba(0,0,0,.6);transform:scale(.88) translateY(20px);transition:transform .45s cubic-bezier(.2,.9,.25,1.25)}
+.fxLb.on .fxLbBox{transform:none}
+.fxLbBox.short{width:min(420px,100%,calc((100vh - 120px) * 9 / 16))}
+.fxLbFrame{position:relative;aspect-ratio:16/9}
+.fxLbBox.short .fxLbFrame{aspect-ratio:9/16}
+.fxLbFrame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.fxLbTitle{background:var(--vc,#2563eb);color:#fff;font-weight:800;font-size:14px;padding:12px 56px 12px 18px}
+.fxLbClose{position:absolute;top:6px;right:8px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.2);color:#fff;cursor:pointer;
+  display:grid;place-items:center;font-size:22px;line-height:1;transition:transform .35s cubic-bezier(.2,.9,.25,1.6),background .25s ease;z-index:2}
+.fxLbClose:hover{transform:rotate(90deg);background:rgba(255,255,255,.35)}
+html.fxNoScroll{overflow:hidden}
+@media (prefers-reduced-motion: reduce){.fxLb,.fxLbBox{transition:none}}
+
+/* ---------- 7. MESSAGE PRÉSENTÉ COMME LA LETTRE PAPIER ---------- */
+#introBody .scrollReadText.letterText{white-space:normal !important;font-size:15px;line-height:1.75}
+#introBody .letterP{margin:0 0 14px;text-align:justify;text-indent:2.4em}
+#introBody .letterP.letterGreet{text-indent:0;text-align:start}
+#introBody .letterP .fadeWord{text-indent:0}
+#introBody .fadeWord.b{font-weight:800 !important}
+#introBody .letterSign{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;margin-top:22px}
+#introBody .letterWho{text-align:center}
+#introBody .letterName{font-weight:800;font-size:15px;color:var(--text)}
+#introBody .letterRole{font-size:14px;color:var(--text);white-space:pre-line;margin-top:2px}
+#introBody .letterLogos{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+#introBody .letterLogos img{height:56px;width:auto;max-width:180px;object-fit:contain}
+@media (max-width:640px){
+  #introBody .letterP{text-indent:1.6em}
+  #introBody .letterSign{grid-template-columns:1fr;justify-items:center}
+  #introBody .letterSign > div:first-child{display:none}
+  #introBody .letterLogos{flex-direction:row;align-items:center;justify-content:center}
+  #introBody .letterLogos img{height:44px}
+}

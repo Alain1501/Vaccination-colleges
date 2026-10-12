@@ -55,3 +55,4 @@
 .rechBox.rechHub{animation:rechHubIn .6s ease 1.65s both}
 @keyframes rechHubIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.rechBox.rechHub{animation:none}}
+.rechItem[data-type="doc"] .rechTitle::after,.rechItem[data-type="video"] .rechTitle::after{content:" ↗";color:var(--rc);font-weight:900}

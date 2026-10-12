@@ -350,14 +350,23 @@
     setTimeout(function () { el.classList.remove('rechFlash'); }, 2600);
   }
 
+  /* Ouverture dans un nouvel onglet uniquement (le site reste ouvert dans l'onglet actuel) */
+  function openTab(url) {
+    var l = document.createElement('a');
+    l.href = url; l.target = '_blank'; l.rel = 'noopener';
+    l.style.display = 'none';
+    document.body.appendChild(l);
+    l.click();
+    l.remove();
+  }
+
   function go(r, evt) {
     close();
     input.blur();
     if (HUB) {
       /* Document, formulaire ou vidéo : ouverture directe */
       if ((r.type === 'doc' || r.type === 'video') && r.url) {
-        var w = window.open(r.url, '_blank', 'noopener');
-        if (!w) location.href = r.url;
+        openTab(r.url);
         return;
       }
       /* Question, étape, lettre : page du collège ou du lycée, à l'endroit exact */
@@ -375,8 +384,7 @@
       if (href) {
         if (href.charAt(0) === '#') { var t = document.querySelector(href); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
         if (/^mailto:/i.test(href) || a.target === '_self') { location.href = a.href; return; }
-        var w = window.open(a.href, '_blank', 'noopener');
-        if (!w) location.href = a.href;
+        openTab(a.href);
         return;
       }
     }

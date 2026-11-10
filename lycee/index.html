@@ -4,6 +4,7 @@
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <title>Vaccination lycée – Île-de-France</title>
+        <link rel="canonical" href="https://vaccination-sud77.fr/lycee/index.html">
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Campagne de vaccination en milieu scolaire en Seine-et-Marne">
         <meta property="og:locale" content="fr_FR">
@@ -1757,6 +1758,17 @@ if (introData?.hpv_flyer_multilang?.url) {
     )
   );
 }
+// Site de la vaccination HPV de l'Institut national du cancer
+if (introData?.inca_hpv_site?.url) {
+  group.appendChild(
+    makeBtn(
+      t(introData.inca_hpv_site.label, 'Site de la vaccination HPV – Institut national du cancer'),
+      introData.inca_hpv_site.url,
+      'btn',
+      'inca_hpv_site'
+    )
+  );
+}
     if(introData?.official_idf?.flyer_pdf?.file){
   group.appendChild(
     makeBtn(
@@ -1890,7 +1902,7 @@ div.addEventListener('click', (e) => {
 
     // ÉTAPE 1 — S’informer (les vidéos ne sont plus dupliquées ici, elles ont
     // leur propre section dédiée plus bas sur la page)
-    if (step.number === 1 && ['flyer_officiel','hpv_resources','faq_link'].includes(key)) {
+    if (step.number === 1 && ['flyer_officiel','hpv_resources','inca_hpv_site','faq_link'].includes(key)) {
       group.appendChild(clone);
     }
 

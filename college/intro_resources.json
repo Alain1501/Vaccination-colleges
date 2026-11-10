@@ -749,5 +749,27 @@
         "file": "../pdf/calendrier_vaccinal_2026_complet.pdf"
       }
     ]
+  },
+  "inca_hpv_site": {
+    "label": {
+      "fr": "Site de la vaccination HPV – Institut national du cancer",
+      "en": "HPV vaccination website – French National Cancer Institute",
+      "ar": "موقع التلقيح ضد فيروس HPV – المعهد الوطني للسرطان",
+      "tr": "HPV aşısı sitesi – Ulusal Kanser Enstitüsü",
+      "ps": "د HPV واکسین وېبپاڼه – د سرطان ملي انسټیټیوټ",
+      "ku": "ماڵپەڕی ڤاکسینی HPV – پەیمانگای نیشتمانیی شێرپەنجە",
+      "ro": "Site-ul despre vaccinarea HPV – Institutul Național al Cancerului",
+      "ka": "HPV ვაქცინაციის საიტი – კიბოს ეროვნული ინსტიტუტი",
+      "sq": "Faqja e vaksinimit HPV – Instituti Kombëtar i Kancerit",
+      "am": "የHPV ክትባት ድረ-ገጽ – ብሔራዊ የካንሰር ተቋም",
+      "zh": "HPV疫苗接种网站 – 法国国家癌症研究所",
+      "prs": "سایت واکسیناسیون HPV – انستیتوت ملی سرطان",
+      "es": "Sitio de la vacunación contra el VPH – Instituto Nacional del Cáncer",
+      "pt": "Site da vacinação contra o HPV – Instituto Nacional do Cancro",
+      "ru": "Сайт о вакцинации против ВПЧ – Национальный институт рака",
+      "uk": "Сайт про вакцинацію проти ВПЛ – Національний інститут раку",
+      "mo": "Site-ul despre vaccinarea HPV – Institutul Național al Cancerului"
+    },
+    "url": "https://vaccination-hpv.cancer.fr/"
   }
 }

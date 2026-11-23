@@ -15,7 +15,9 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Logo de l’Équipe Mobile de Vaccination Sud 77">
 <meta name="twitter:card" content="summary_large_image">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<!-- Outil de création du PDF (jsPDF 2.5.1), hébergé sur le site. Copie de secours en ligne si le fichier local ne se charge pas -->
+<script src="../js/jspdf.umd.min.js?v=2.5.1"></script>
+<script>window.jspdf||document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"><\/script>')</script>
 <script>
 //---------------------------------------------------------------------
 //
@@ -3237,6 +3239,7 @@ document.addEventListener('click', (e)=>{
 startLangCycle();
 
 function applyLanguage(){
+  if(typeof preparerPdf === 'function' && typeof current !== 'undefined' && current === 6) setTimeout(preparerPdf, 0);
   const dict = I18N[currentLang] || I18N.fr;
   document.documentElement.setAttribute('lang', currentLang);
   document.documentElement.setAttribute('dir', dict.dir);
@@ -3318,6 +3321,7 @@ function showStep(n){
   }
   if(n===6){
     newCaptchaChallenge();
+    if(typeof preparerPdf === 'function') preparerPdf();
   }
   updateNextButtonState();
 }
@@ -4352,9 +4356,63 @@ document.getElementById('sendEmailBtn').addEventListener('click', async ()=>{
 });
 
 // ---- Téléchargement ----
-document.getElementById('downloadBtn').addEventListener('click', async ()=>{
+// Le PDF est préparé dès l'arrivée sur le récapitulatif : au moment de l'appui, il part tout de suite.
+// Sur iPhone et iPad, un téléchargement n'est accepté que s'il suit immédiatement l'appui sur le bouton.
+let PDF_PRET = null, PDF_MINUTERIE = null;
+function preparerPdf(){
+  PDF_PRET = null;
+  clearTimeout(PDF_MINUTERIE);
+  PDF_MINUTERIE = setTimeout(async ()=>{
+    try{
+      try { await PDF_FONTS_READY; } catch(e) {}
+      const doc = buildPdf();
+      PDF_PRET = { blob: doc.output('blob'), filename: buildPdfFilename() };
+    } catch(err){ console.error(err); PDF_PRET = null; }
+  }, 200);
+}
+// Toute modification du formulaire, hors question de vérification, oblige à refaire le PDF
+['input','change'].forEach(ev => document.getElementById('vaccForm').addEventListener(ev, e => {
+  if(e.target && e.target.id === 'captchaAnswer') return;
+  if(current === 6) preparerPdf(); else PDF_PRET = null;
+}));
+function estAppareilApple(){
+  return /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+function pdfLivre(){
+  document.getElementById('downloadedNote').style.display = 'block';
+  newCaptchaChallenge();
+}
+function ouvrirPdfOnglet(p){
+  const url = URL.createObjectURL(p.blob);
+  const w = window.open(url, '_blank');
+  if(!w) location.href = url;
+  setTimeout(()=>URL.revokeObjectURL(url), 120000);
+  pdfLivre();
+}
+function livrerPdf(p){
+  if(estAppareilApple()){
+    // Menu de partage d'Apple : Enregistrer dans Fichiers, Mail, etc.
+    try{
+      const fichier = new File([p.blob], p.filename, { type: 'application/pdf' });
+      if(navigator.canShare && navigator.canShare({ files: [fichier] })){
+        navigator.share({ files: [fichier], title: p.filename })
+          .then(pdfLivre)
+          .catch(err => { if(err && err.name === 'AbortError') return; ouvrirPdfOnglet(p); });
+        return;
+      }
+    } catch(e) {}
+    ouvrirPdfOnglet(p);
+    return;
+  }
+  const url = URL.createObjectURL(p.blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = p.filename; a.rel = 'noopener';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url), 60000);
+  pdfLivre();
+}
+document.getElementById('downloadBtn').addEventListener('click', ()=>{
   const btn = document.getElementById('downloadBtn');
-  const originalLabel = btn.textContent;
 
   // Vérification anti-robot avant le téléchargement
   if(!captchaIsValid()){
@@ -4365,42 +4423,18 @@ document.getElementById('downloadBtn').addEventListener('click', async ()=>{
     return;
   }
 
-  btn.disabled = true;
-  btn.textContent = tr('generatingLabel');
   try{
-    try { await PDF_FONTS_READY; } catch(e) {}
-    const doc = buildPdf();
-    const filename = buildPdfFilename();
-    const blob = doc.output('blob');
-
-    const downloadsApi = (window.claude && typeof window.claude.use === 'function')
-      ? await window.claude.use('downloads')
-      : null;
-
-    if(downloadsApi){
-      try{
-        await downloadsApi.save({ filename, data: blob });
-        document.getElementById('downloadedNote').style.display = 'block';
-        newCaptchaChallenge();
-      } catch(saveErr){
-        if(saveErr && saveErr.code === 'declined'){
-          // annulé par l'utilisateur, rien à signaler
-        } else {
-          console.error(saveErr);
-          alert(tr('downloadFailAlert').replace('{code}', saveErr && saveErr.code ? saveErr.code : 'unknown'));
-        }
-      }
-    } else {
-      doc.save(filename);
-      document.getElementById('downloadedNote').style.display = 'block';
-      newCaptchaChallenge();
+    // PDF déjà prêt, sinon fabriqué tout de suite, sans attente (police intégrée au site)
+    let p = PDF_PRET;
+    if(!p){
+      const doc = buildPdf();
+      p = { blob: doc.output('blob'), filename: buildPdfFilename() };
+      PDF_PRET = p;
     }
+    livrerPdf(p);
   } catch(err){
     console.error(err);
     alert(tr('downloadErrorAlert'));
-  } finally {
-    btn.disabled = false;
-    btn.textContent = originalLabel;
   }
 });
 
